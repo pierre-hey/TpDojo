@@ -79,7 +79,6 @@ namespace TpDojo.Controllers
             SelectList selectArme = new SelectList(_context.Arme, "Id", "Nom");
             samuraiVM.ArmesSelect = selectArme;
 
-
            // ViewData["ArmeId"] = new SelectList(selectArme, "Id", "Nom");
             return View(samuraiVM);
         }
@@ -89,29 +88,30 @@ namespace TpDojo.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nom,Force,ArmeId")] SamuraiVM samuraiVM)
+        public async Task<IActionResult> Create([Bind("Id,Nom,Force,ArmeId")] Samurai samurai)
         {
 
-            Samurai samurai = new Samurai();
+       /*     Samurai samurai = new Samurai();
             samurai.Nom = samuraiVM.Nom;
             samurai.Arme = _context.Arme.Find(samuraiVM.ArmeId);
-            samurai.Force= samuraiVM.Force;
+            samurai.Force= samuraiVM.Force;*/
 
-            Console.WriteLine($"#################");
+/*            Console.WriteLine($"#################");
             Console.WriteLine($"POST Samurai => Id: {samurai.Id} - Nom: {samurai.Nom} - ArmeId: {samurai.ArmeId} - Arme: {samurai.Arme.Nom}");
-            Console.WriteLine($"#################");
+            Console.WriteLine($"#################");*/
             
 
-       //     if (ModelState.IsValid)
-        //    {
+            if (ModelState.IsValid)
+            {
                 _context.Add(samurai);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-         //   }
+            }
         //    ViewData["ArmeId"] = new SelectList(_context.Arme, "Id", "Nom", samuraiVM.ArmeId);
             SelectList selectArme = new SelectList(_context.Arme, "Id", "Nom");
-            samuraiVM.ArmesSelect = selectArme;
-            return View(samuraiVM);
+       /*     samuraiVM.ArmesSelect = selectArme;*/
+            /*return View(samuraiVM);*/
+            return View(samurai);
         }
 
 

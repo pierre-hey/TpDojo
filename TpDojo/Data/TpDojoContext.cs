@@ -25,7 +25,7 @@ namespace TpDojo.Data
             modelBuilder
                 .Entity<Samurai>()
                 .HasOne(s => s.Arme)
-                .WithOne()
+                .WithMany()
                 .OnDelete(DeleteBehavior.SetNull);
         }
     }
