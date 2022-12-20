@@ -1,0 +1,21 @@
+﻿@model BO.Samurai
+<dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nom)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nom)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Force)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Force)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Arme)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Arme.Nom)
+        </dd>
+    </dl>

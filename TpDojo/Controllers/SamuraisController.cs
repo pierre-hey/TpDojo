@@ -115,10 +115,6 @@ namespace TpDojo.Controllers
         }
 
 
-
-
-
-
         // GET: Samurais/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -132,8 +128,20 @@ namespace TpDojo.Controllers
             {
                 return NotFound();
             }
-            ViewData["ArmeId"] = new SelectList(_context.Arme, "Id", "Id", samurai.ArmeId);
-            return View(samurai);
+
+
+            SamuraiVM samuraiVM = new SamuraiVM
+            {
+                Nom = samurai.Nom,
+                Force = samurai.Force,
+                Id = samurai.Id,
+                ArmeId = samurai.ArmeId,
+                ArmesSelect = new SelectList(_context.Arme, "Id", "Nom"),
+        };
+
+
+            //ViewData["ArmeId"] = new SelectList(_context.Arme, "Id", "Id", samurai.ArmeId);
+            return View(samuraiVM);
         }
 
         // POST: Samurais/Edit/5

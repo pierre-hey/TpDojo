@@ -64,6 +64,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FtdXJhaXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Pierre/source/repos/TpDojo/TpDojo/Views/Samurais/_form_samurai.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FtdXJhaXNcX2Zvcm1fc2FtdXJhaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pierre/source/repos/TpDojo/TpDojo/Views/Samurais/_samurai_details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FtdXJhaXNcX3NhbXVyYWlfZGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Pierre/source/repos/TpDojo/TpDojo/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
