@@ -28,14 +28,27 @@ namespace TpDojo.Controllers
         }    */ 
         
         // GET: Samurais
-        public async Task<IActionResult> Index(string sortOrder, string searchString)
+        public async Task<IActionResult> Index(
+                                            string sortOrder, 
+                                            string currentFilter, 
+                                            string searchString, 
+                                            int? pageNumber)
         {
+            ViewData["CurrentSort"] = sortOrder;
             ViewData["NameSortParam"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewData["ForceSortParam"] = sortOrder == "Force" ? "force_asc" : "Force";
+            
+
+            if (searchString != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
 
             ViewData["CurrentFilter"] = searchString;
-
-            
             var samurais = _context.Samurai.Select(s => s);
 
 
@@ -51,21 +64,24 @@ namespace TpDojo.Controllers
             switch (sortOrder)
             {
                 case "name_desc":
-                    samurais = samurais.OrderByDescending(s => s.Nom).Include(s => s.Arme);
+                    samurais = samurais.OrderByDescending(s => s.Nom);
                     break;
 
                 case "Force":
-                    samurais = samurais.OrderBy(s => s.Force).Include(s => s.Arme);
+                    samurais = samurais.OrderBy(s => s.Force);
                     break;
+
                 default: 
-                    samurais = samurais.OrderBy(s => s.Id).Include(s => s.Arme);
+                    samurais = samurais.OrderBy(s => s.Id);
                     break;
             }
 
 
 
            // return View(await tpDojoContext.ToListAsync());
-            return View(samurais);
+            /*return View(await samurais.Include(s => s.Arme).ToListAsync());*/
+            int pageSize = 7;
+            return View(await PaginatedList<Samurai>.CreateAsync(samurais.Include(s => s.Arme).AsNoTracking(), pageNumber ?? 1, pageSize));
         }
 
         // GET: Samurais/Details/5
