@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TpDojo.Data;
 
@@ -11,9 +12,10 @@ using TpDojo.Data;
 namespace TpDojo.Migrations
 {
     [DbContext(typeof(TpDojoContext))]
-    partial class TpDojoContextModelSnapshot : ModelSnapshot
+    [Migration("20221220091240_add data")]
+    partial class adddata
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -69,1921 +71,1921 @@ namespace TpDojo.Migrations
                         new
                         {
                             Id = 1,
-                            Force = 1874,
+                            Force = 1244,
                             Nom = "Abe Masakatsu"
                         },
                         new
                         {
                             Id = 2,
-                            Force = 418,
+                            Force = 472,
                             Nom = "Adachi Yasumori"
                         },
                         new
                         {
                             Id = 3,
-                            Force = 972,
+                            Force = 675,
                             Nom = "Adachi Kagemori"
                         },
                         new
                         {
                             Id = 4,
-                            Force = 1687,
+                            Force = 601,
                             Nom = "Adams William"
                         },
                         new
                         {
                             Id = 5,
-                            Force = 826,
+                            Force = 1451,
                             Nom = "Aiou Mototsuna"
                         },
                         new
                         {
                             Id = 6,
-                            Force = 1385,
+                            Force = 82,
                             Nom = "Akai Terukage"
                         },
                         new
                         {
                             Id = 7,
-                            Force = 1409,
+                            Force = 474,
                             Nom = "Akao Kiyotsuna"
                         },
                         new
                         {
                             Id = 8,
-                            Force = 1371,
+                            Force = 624,
                             Nom = "Akechi Mitsuhide"
                         },
                         new
                         {
                             Id = 9,
-                            Force = 1416,
+                            Force = 1084,
                             Nom = "Akiyama Nobutomo"
                         },
                         new
                         {
                             Id = 10,
-                            Force = 1833,
+                            Force = 1229,
                             Nom = "Amago Haruhisa"
                         },
                         new
                         {
                             Id = 11,
-                            Force = 1324,
+                            Force = 1361,
                             Nom = "Amago Yoshihisa"
                         },
                         new
                         {
                             Id = 12,
-                            Force = 1815,
+                            Force = 1537,
                             Nom = "Andō Morinari"
                         },
                         new
                         {
                             Id = 13,
-                            Force = 1628,
+                            Force = 1046,
                             Nom = "Ankokuji Ekei"
                         },
                         new
                         {
                             Id = 14,
-                            Force = 42,
+                            Force = 223,
                             Nom = "Aochi Shigetsuna"
                         },
                         new
                         {
                             Id = 15,
-                            Force = 987,
+                            Force = 766,
                             Nom = "Aokage Takaakira"
                         },
                         new
                         {
                             Id = 16,
-                            Force = 1326,
+                            Force = 1538,
                             Nom = "Aoki Kazushige"
                         },
                         new
                         {
                             Id = 17,
-                            Force = 674,
+                            Force = 521,
                             Nom = "Akahori Chohichi"
                         },
                         new
                         {
                             Id = 18,
-                            Force = 166,
+                            Force = 88,
                             Nom = "Arai Hakuseki"
                         },
                         new
                         {
                             Id = 19,
-                            Force = 883,
+                            Force = 150,
                             Nom = "Araki Motokiyo"
                         },
                         new
                         {
                             Id = 20,
-                            Force = 379,
+                            Force = 903,
                             Nom = "Araki Murashige"
                         },
                         new
                         {
                             Id = 21,
-                            Force = 1468,
+                            Force = 352,
                             Nom = "Araki Muratsugu"
                         },
                         new
                         {
                             Id = 22,
-                            Force = 947,
+                            Force = 407,
                             Nom = "Arima Kihei"
                         },
                         new
                         {
                             Id = 23,
-                            Force = 1533,
+                            Force = 393,
                             Nom = "Asakura Yoshikage"
                         },
                         new
                         {
                             Id = 24,
-                            Force = 837,
+                            Force = 141,
                             Nom = "Ayame Kagekatsu"
                         },
                         new
                         {
                             Id = 25,
-                            Force = 182,
+                            Force = 1427,
                             Nom = "Azai Hisamasa"
                         },
                         new
                         {
                             Id = 26,
-                            Force = 748,
+                            Force = 1811,
                             Nom = "Azai Nagamasa"
                         },
                         new
                         {
                             Id = 27,
-                            Force = 866,
+                            Force = 1493,
                             Nom = "Azai Sukemasa"
                         },
                         new
                         {
                             Id = 28,
-                            Force = 980,
+                            Force = 1477,
                             Nom = "Baba Nobufusa"
                         },
                         new
                         {
                             Id = 29,
-                            Force = 661,
+                            Force = 1200,
                             Nom = "Bessho Nagaharu"
                         },
                         new
                         {
                             Id = 30,
-                            Force = 1381,
+                            Force = 897,
                             Nom = "Chacha"
                         },
                         new
                         {
                             Id = 31,
-                            Force = 1542,
+                            Force = 187,
                             Nom = "Chiba Shusaku Narimasa"
                         },
                         new
                         {
                             Id = 32,
-                            Force = 245,
+                            Force = 1719,
                             Nom = "Chōsokabe Morichika"
                         },
                         new
                         {
                             Id = 33,
-                            Force = 1509,
+                            Force = 90,
                             Nom = "Chōsokabe Kunichika"
                         },
                         new
                         {
                             Id = 34,
-                            Force = 1521,
+                            Force = 130,
                             Nom = "Chōsokabe Motochika"
                         },
                         new
                         {
                             Id = 35,
-                            Force = 1332,
+                            Force = 267,
                             Nom = "Chōsokabe Nobuchika"
                         },
                         new
                         {
                             Id = 36,
-                            Force = 1125,
+                            Force = 69,
                             Nom = "Collache Eugène"
                         },
                         new
                         {
                             Id = 37,
-                            Force = 1409,
+                            Force = 1210,
                             Nom = "Date Masamune"
                         },
                         new
                         {
                             Id = 38,
-                            Force = 762,
+                            Force = 547,
                             Nom = "Date Shigezane"
                         },
                         new
                         {
                             Id = 39,
-                            Force = 558,
+                            Force = 1147,
                             Nom = "Doi Toshikatsu"
                         },
                         new
                         {
                             Id = 40,
-                            Force = 470,
+                            Force = 1548,
                             Nom = "Etō Shinpei"
                         },
                         new
                         {
                             Id = 41,
-                            Force = 1843,
+                            Force = 1222,
                             Nom = "Endō Naotsune"
                         },
                         new
                         {
                             Id = 42,
-                            Force = 1474,
+                            Force = 503,
                             Nom = "Enjoji Nobutane"
                         },
                         new
                         {
                             Id = 43,
-                            Force = 1579,
+                            Force = 1435,
                             Nom = "Enomoto Takeaki"
                         },
                         new
                         {
                             Id = 44,
-                            Force = 789,
+                            Force = 1911,
                             Nom = "Era Fusahide"
                         },
                         new
                         {
                             Id = 45,
-                            Force = 1785,
+                            Force = 1996,
                             Nom = "Fūma Kotarō"
                         },
                         new
                         {
                             Id = 46,
-                            Force = 663,
+                            Force = 1161,
                             Nom = "Fuwa Mitsuharu"
                         },
                         new
                         {
                             Id = 47,
-                            Force = 1928,
+                            Force = 1950,
                             Nom = "Fukushima Masanori"
                         },
                         new
                         {
                             Id = 48,
-                            Force = 562,
+                            Force = 1408,
                             Nom = "Gamō Katahide"
                         },
                         new
                         {
                             Id = 49,
-                            Force = 129,
+                            Force = 413,
                             Nom = "Gamō Ujisato"
                         },
                         new
                         {
                             Id = 50,
-                            Force = 4,
+                            Force = 1550,
                             Nom = "Harada Naomasa"
                         },
                         new
                         {
                             Id = 51,
-                            Force = 1145,
+                            Force = 1078,
                             Nom = "Harada Nobutane"
                         },
                         new
                         {
                             Id = 52,
-                            Force = 722,
+                            Force = 819,
                             Nom = "Harada Sanosuke"
                         },
                         new
                         {
                             Id = 53,
-                            Force = 1887,
+                            Force = 896,
                             Nom = "Hasekura Tsunenaga"
                         },
                         new
                         {
                             Id = 54,
-                            Force = 1412,
+                            Force = 1234,
                             Nom = "Hattori Hanzō"
                         },
                         new
                         {
                             Id = 55,
-                            Force = 1697,
+                            Force = 457,
                             Nom = "Hatano Hideharu"
                         },
                         new
                         {
                             Id = 56,
-                            Force = 265,
+                            Force = 831,
                             Nom = "Hasegawa Eishin"
                         },
                         new
                         {
                             Id = 57,
-                            Force = 1223,
+                            Force = 1119,
                             Nom = "Hayashizaki Jinsuke Shigenobu"
                         },
                         new
                         {
                             Id = 58,
-                            Force = 1410,
+                            Force = 50,
                             Nom = "Hayashi Narinaga"
                         },
                         new
                         {
                             Id = 59,
-                            Force = 1729,
+                            Force = 129,
                             Nom = "Hijikata Toshizo"
                         },
                         new
                         {
                             Id = 60,
-                            Force = 1806,
+                            Force = 922,
                             Nom = "Hirate Masahide"
                         },
                         new
                         {
                             Id = 61,
-                            Force = 649,
+                            Force = 566,
                             Nom = "Hitotsubashi Keiki"
                         },
                         new
                         {
                             Id = 62,
-                            Force = 511,
+                            Force = 1156,
                             Nom = "Hōjō Masako"
                         },
                         new
                         {
                             Id = 63,
-                            Force = 1560,
+                            Force = 1051,
                             Nom = "Hōjō Tokimune"
                         },
                         new
                         {
                             Id = 64,
-                            Force = 1667,
+                            Force = 1196,
                             Nom = "Hōjō Ujiyasu"
                         },
                         new
                         {
                             Id = 65,
-                            Force = 1527,
+                            Force = 1463,
                             Nom = "Hōjō Ujimasa"
                         },
                         new
                         {
                             Id = 66,
-                            Force = 1078,
+                            Force = 1315,
                             Nom = "Honda Tadakatsu"
                         },
                         new
                         {
                             Id = 67,
-                            Force = 1313,
+                            Force = 1889,
                             Nom = "Honda Tadatomo"
                         },
                         new
                         {
                             Id = 68,
-                            Force = 1220,
+                            Force = 1601,
                             Nom = "Honganji Kennyo"
                         },
                         new
                         {
                             Id = 69,
-                            Force = 1832,
+                            Force = 319,
                             Nom = "Horio Yoshiharu"
                         },
                         new
                         {
                             Id = 70,
-                            Force = 1902,
+                            Force = 156,
                             Nom = "Hosokawa Fujitaka"
                         },
                         new
                         {
                             Id = 71,
-                            Force = 1928,
+                            Force = 1624,
                             Nom = "Hosokawa Gracia"
                         },
                         new
                         {
                             Id = 72,
-                            Force = 1319,
+                            Force = 1121,
                             Nom = "Hosokawa Tadaoki"
                         },
                         new
                         {
                             Id = 73,
-                            Force = 566,
+                            Force = 1883,
                             Nom = "Hotta Masatoshi"
                         },
                         new
                         {
                             Id = 74,
-                            Force = 1332,
+                            Force = 1565,
                             Nom = "Ii Naoaki"
                         },
                         new
                         {
                             Id = 75,
-                            Force = 1206,
+                            Force = 1848,
                             Nom = "Ii Naomasa"
                         },
                         new
                         {
                             Id = 76,
-                            Force = 1140,
+                            Force = 1470,
                             Nom = "Ii Naomori"
                         },
                         new
                         {
                             Id = 77,
-                            Force = 704,
+                            Force = 1317,
                             Nom = "Ii Naonaka"
                         },
                         new
                         {
                             Id = 78,
-                            Force = 1569,
+                            Force = 1637,
                             Nom = "Ii Naosuke"
                         },
                         new
                         {
                             Id = 79,
-                            Force = 545,
+                            Force = 752,
                             Nom = "Ii Naotaka"
                         },
                         new
                         {
                             Id = 80,
-                            Force = 346,
+                            Force = 1279,
                             Nom = "Ii Naotora"
                         },
                         new
                         {
                             Id = 81,
-                            Force = 956,
+                            Force = 1702,
                             Nom = "Ii Naoyuki"
                         },
                         new
                         {
                             Id = 82,
-                            Force = 1803,
+                            Force = 1995,
                             Nom = "Ii Naozumi"
                         },
                         new
                         {
                             Id = 83,
-                            Force = 1532,
+                            Force = 348,
                             Nom = "Iizasa Ienao"
                         },
                         new
                         {
                             Id = 84,
-                            Force = 1256,
+                            Force = 1430,
                             Nom = "Ijuin Tadaaki"
                         },
                         new
                         {
                             Id = 85,
-                            Force = 1106,
+                            Force = 1430,
                             Nom = "Ikeda Tsuneoki"
                         },
                         new
                         {
                             Id = 86,
-                            Force = 292,
+                            Force = 688,
                             Nom = "Imagawa Ujizane"
                         },
                         new
                         {
                             Id = 87,
-                            Force = 745,
+                            Force = 1462,
                             Nom = "Imagawa Yoshimoto"
                         },
                         new
                         {
                             Id = 88,
-                            Force = 1624,
+                            Force = 964,
                             Nom = "Imai Kanehira"
                         },
                         new
                         {
                             Id = 89,
-                            Force = 1755,
+                            Force = 624,
                             Nom = "Inaba Yoshimichi"
                         },
                         new
                         {
                             Id = 90,
-                            Force = 422,
+                            Force = 1875,
                             Nom = "Inugami Nagayasu"
                         },
                         new
                         {
                             Id = 91,
-                            Force = 1023,
+                            Force = 1178,
                             Nom = "Ishida Mitsunari"
                         },
                         new
                         {
                             Id = 92,
-                            Force = 4,
+                            Force = 301,
                             Nom = "Isshiki Fujinaga"
                         },
                         new
                         {
                             Id = 93,
-                            Force = 560,
+                            Force = 1466,
                             Nom = "Itagaki Nobukata"
                         },
                         new
                         {
                             Id = 94,
-                            Force = 243,
+                            Force = 465,
                             Nom = "Itō Hirobumi"
                         },
                         new
                         {
                             Id = 95,
-                            Force = 1040,
+                            Force = 1389,
                             Nom = "Iwanari Tomomichi"
                         },
                         new
                         {
                             Id = 96,
-                            Force = 1103,
+                            Force = 329,
                             Nom = "Jinbo Nagamoto"
                         },
                         new
                         {
                             Id = 97,
-                            Force = 360,
+                            Force = 655,
                             Nom = "Jonas Tönse"
                         },
                         new
                         {
                             Id = 98,
-                            Force = 1276,
+                            Force = 1383,
                             Nom = "Kannan Kumar(Salem)"
                         },
                         new
                         {
                             Id = 99,
-                            Force = 557,
+                            Force = 135,
                             Nom = "Kakeda Toshimune"
                         },
                         new
                         {
                             Id = 100,
-                            Force = 1022,
+                            Force = 392,
                             Nom = "Kaneko Ietada"
                         },
                         new
                         {
                             Id = 101,
-                            Force = 112,
+                            Force = 1733,
                             Nom = "Katagiri Katsumoto"
                         },
                         new
                         {
                             Id = 102,
-                            Force = 1016,
+                            Force = 165,
                             Nom = "Katakura Kojūro"
                         },
                         new
                         {
                             Id = 103,
-                            Force = 222,
+                            Force = 240,
                             Nom = "Katakura Shigenaga"
                         },
                         new
                         {
                             Id = 104,
-                            Force = 459,
+                            Force = 965,
                             Nom = "Kataoka Mitsumasa"
                         },
                         new
                         {
                             Id = 105,
-                            Force = 1952,
+                            Force = 88,
                             Nom = "Katō Kiyomasa"
                         },
                         new
                         {
                             Id = 106,
-                            Force = 1538,
+                            Force = 120,
                             Nom = "Kawakami Gensai"
                         },
                         new
                         {
                             Id = 107,
-                            Force = 592,
+                            Force = 777,
                             Nom = "Kido Takayoshi"
                         },
                         new
                         {
                             Id = 108,
-                            Force = 1443,
+                            Force = 204,
                             Nom = "Kikkawa Hiroie"
                         },
                         new
                         {
                             Id = 109,
-                            Force = 419,
+                            Force = 315,
                             Nom = "Kimotsuki Kanetsugu"
                         },
                         new
                         {
                             Id = 110,
-                            Force = 472,
+                            Force = 343,
                             Nom = "Kitamura Kansuke"
                         },
                         new
                         {
                             Id = 111,
-                            Force = 90,
+                            Force = 766,
                             Nom = "Kobayakawa Hideaki"
                         },
                         new
                         {
                             Id = 112,
-                            Force = 868,
+                            Force = 464,
                             Nom = "Kobayakawa Hidekane"
                         },
                         new
                         {
                             Id = 113,
-                            Force = 1175,
+                            Force = 1361,
                             Nom = "Kobayakawa Takakage"
                         },
                         new
                         {
                             Id = 114,
-                            Force = 1554,
+                            Force = 1690,
                             Nom = "Konishi Yukinaga"
                         },
                         new
                         {
                             Id = 115,
-                            Force = 1219,
+                            Force = 921,
                             Nom = "Kojima Toyoharu"
                         },
                         new
                         {
                             Id = 116,
-                            Force = 1355,
+                            Force = 1454,
                             Nom = "Kuroda Kanbei"
                         },
                         new
                         {
                             Id = 117,
-                            Force = 980,
+                            Force = 1393,
                             Nom = "Kuroda Kiyotaka"
                         },
                         new
                         {
                             Id = 118,
-                            Force = 1171,
+                            Force = 714,
                             Nom = "Kusunoki Masashige"
                         },
                         new
                         {
                             Id = 119,
-                            Force = 831,
+                            Force = 332,
                             Nom = "Kuwana Tarozaemon"
                         },
                         new
                         {
                             Id = 120,
-                            Force = 71,
+                            Force = 34,
                             Nom = "Kumagai Naozane"
                         },
                         new
                         {
                             Id = 121,
-                            Force = 1225,
+                            Force = 389,
                             Nom = "Maeda Keiji"
                         },
                         new
                         {
                             Id = 122,
-                            Force = 1482,
+                            Force = 944,
                             Nom = "Maeda Matsu"
                         },
                         new
                         {
                             Id = 123,
-                            Force = 30,
+                            Force = 1021,
                             Nom = "Maeda Nagatane"
                         },
                         new
                         {
                             Id = 124,
-                            Force = 582,
+                            Force = 1715,
                             Nom = "Maeda Toshiie"
                         },
                         new
                         {
                             Id = 125,
-                            Force = 1495,
+                            Force = 1025,
                             Nom = "Maeda Toshinaga"
                         },
                         new
                         {
                             Id = 126,
-                            Force = 1504,
+                            Force = 1689,
                             Nom = "Maeda Toshitsune"
                         },
                         new
                         {
                             Id = 127,
-                            Force = 648,
+                            Force = 738,
                             Nom = "Magome Kageyu"
                         },
                         new
                         {
                             Id = 128,
-                            Force = 1495,
+                            Force = 396,
                             Nom = "Manabe Akifusa"
                         },
                         new
                         {
                             Id = 129,
-                            Force = 1846,
+                            Force = 437,
                             Nom = "Matsudaira Katamori"
                         },
                         new
                         {
                             Id = 130,
-                            Force = 1522,
+                            Force = 1069,
                             Nom = "Matsudaira Nobutsuna"
                         },
                         new
                         {
                             Id = 131,
-                            Force = 588,
+                            Force = 1957,
                             Nom = "Matsudaira Nobuyasu"
                         },
                         new
                         {
                             Id = 132,
-                            Force = 739,
+                            Force = 443,
                             Nom = "Matsudaira Higo no Kami Katamori"
                         },
                         new
                         {
                             Id = 133,
-                            Force = 1273,
+                            Force = 37,
                             Nom = "Matsudaira Sadanobu"
                         },
                         new
                         {
                             Id = 134,
-                            Force = 242,
+                            Force = 1499,
                             Nom = "Matsudaira Tadayoshi"
                         },
                         new
                         {
                             Id = 135,
-                            Force = 969,
+                            Force = 69,
                             Nom = "Matsudaira Teru"
                         },
                         new
                         {
                             Id = 136,
-                            Force = 847,
+                            Force = 107,
                             Nom = "Matsunaga Hisahide"
                         },
                         new
                         {
                             Id = 137,
-                            Force = 802,
+                            Force = 1439,
                             Nom = "Matsunaga Hisamichi"
                         },
                         new
                         {
                             Id = 138,
-                            Force = 667,
+                            Force = 781,
                             Nom = "Matsuo Bashō"
                         },
                         new
                         {
                             Id = 139,
-                            Force = 989,
+                            Force = 1892,
                             Nom = "Matsudaira Motoyasu"
                         },
                         new
                         {
                             Id = 140,
-                            Force = 856,
+                            Force = 1071,
                             Nom = "Minamoto no Mitsunaka"
                         },
                         new
                         {
                             Id = 141,
-                            Force = 1863,
+                            Force = 800,
                             Nom = "Minamoto no Yoshiie"
                         },
                         new
                         {
                             Id = 142,
-                            Force = 1340,
+                            Force = 1936,
                             Nom = "Minamoto no Yoshimitsu"
                         },
                         new
                         {
                             Id = 143,
-                            Force = 998,
+                            Force = 1362,
                             Nom = "Minamoto no Yoshinaka"
                         },
                         new
                         {
                             Id = 144,
-                            Force = 1826,
+                            Force = 1235,
                             Nom = "Minamoto no Yoshitomo"
                         },
                         new
                         {
                             Id = 145,
-                            Force = 285,
+                            Force = 958,
                             Nom = "Minamoto no Yoshitsune"
                         },
                         new
                         {
                             Id = 146,
-                            Force = 369,
+                            Force = 328,
                             Nom = "Minamoto no Tameyoshi"
                         },
                         new
                         {
                             Id = 147,
-                            Force = 644,
+                            Force = 1929,
                             Nom = "Minamoto no Yorimasa"
                         },
                         new
                         {
                             Id = 148,
-                            Force = 1446,
+                            Force = 1651,
                             Nom = "Minamoto no Yorimitsu"
                         },
                         new
                         {
                             Id = 149,
-                            Force = 463,
+                            Force = 1439,
                             Nom = "Minamoto no Yoritomo"
                         },
                         new
                         {
                             Id = 150,
-                            Force = 1675,
+                            Force = 1580,
                             Nom = "Minamoto no Noriyori"
                         },
                         new
                         {
                             Id = 151,
-                            Force = 803,
+                            Force = 403,
                             Nom = "Minoro Takashi"
                         },
                         new
                         {
                             Id = 152,
-                            Force = 1601,
+                            Force = 920,
                             Nom = "Miura Anjin"
                         },
                         new
                         {
                             Id = 153,
-                            Force = 1404,
+                            Force = 1553,
                             Nom = "Miura Yoshimoto"
                         },
                         new
                         {
                             Id = 154,
-                            Force = 224,
+                            Force = 60,
                             Nom = "Miyamoto Musashi"
                         },
                         new
                         {
                             Id = 155,
-                            Force = 699,
+                            Force = 647,
                             Nom = "Miyoshi Chōkei"
                         },
                         new
                         {
                             Id = 156,
-                            Force = 403,
+                            Force = 1204,
                             Nom = "Miyoshi Kazuhide"
                         },
                         new
                         {
                             Id = 157,
-                            Force = 1711,
+                            Force = 1074,
                             Nom = "Miyoshi Masaga"
                         },
                         new
                         {
                             Id = 158,
-                            Force = 1618,
+                            Force = 88,
                             Nom = "Miyoshi Masayasu"
                         },
                         new
                         {
                             Id = 159,
-                            Force = 840,
+                            Force = 1498,
                             Nom = "Miyoshi Moriyata"
                         },
                         new
                         {
                             Id = 160,
-                            Force = 904,
+                            Force = 1910,
                             Nom = "Miyoshi Nagayuki"
                         },
                         new
                         {
                             Id = 161,
-                            Force = 1866,
+                            Force = 1219,
                             Nom = "Miyoshi Yoshitsugu"
                         },
                         new
                         {
                             Id = 162,
-                            Force = 1945,
+                            Force = 1797,
                             Nom = "Mizuno Tadakuni"
                         },
                         new
                         {
                             Id = 163,
-                            Force = 15,
+                            Force = 452,
                             Nom = "Moniwa Yoshinao"
                         },
                         new
                         {
                             Id = 164,
-                            Force = 779,
+                            Force = 502,
                             Nom = "Mōri Motonari"
                         },
                         new
                         {
                             Id = 165,
-                            Force = 848,
+                            Force = 724,
                             Nom = "Mōri Nagasada"
                         },
                         new
                         {
                             Id = 166,
-                            Force = 1789,
+                            Force = 711,
                             Nom = "Mori Nagayoshi"
                         },
                         new
                         {
                             Id = 167,
-                            Force = 1572,
+                            Force = 790,
                             Nom = "Mōri Okimoto"
                         },
                         new
                         {
                             Id = 168,
-                            Force = 1680,
+                            Force = 1080,
                             Nom = "Mori Ranmaru"
                         },
                         new
                         {
                             Id = 169,
-                            Force = 1835,
+                            Force = 1077,
                             Nom = "Mōri Takamoto"
                         },
                         new
                         {
                             Id = 170,
-                            Force = 1499,
+                            Force = 1832,
                             Nom = "Mori Tadamasa"
                         },
                         new
                         {
                             Id = 171,
-                            Force = 859,
+                            Force = 615,
                             Nom = "Mōri Terumoto"
                         },
                         new
                         {
                             Id = 172,
-                            Force = 1428,
+                            Force = 538,
                             Nom = "Mori Yoshinari"
                         },
                         new
                         {
                             Id = 173,
-                            Force = 1277,
+                            Force = 1634,
                             Nom = "Murai Sadakatsu"
                         },
                         new
                         {
                             Id = 174,
-                            Force = 1578,
+                            Force = 1674,
                             Nom = "Nagakura Shinpachi"
                         },
                         new
                         {
                             Id = 175,
-                            Force = 15,
+                            Force = 521,
                             Nom = "Nagao Harukage"
                         },
                         new
                         {
                             Id = 176,
-                            Force = 1059,
+                            Force = 1820,
                             Nom = "Nagao Kagenobu"
                         },
                         new
                         {
                             Id = 177,
-                            Force = 188,
+                            Force = 1367,
                             Nom = "Nagao Masakage"
                         },
                         new
                         {
                             Id = 178,
-                            Force = 92,
+                            Force = 564,
                             Nom = "Nagao Tamekage"
                         },
                         new
                         {
                             Id = 179,
-                            Force = 14,
+                            Force = 1120,
                             Nom = "Nakagawa Kiyohide"
                         },
                         new
                         {
                             Id = 180,
-                            Force = 517,
+                            Force = 103,
                             Nom = "Nakaoka Shintarō"
                         },
                         new
                         {
                             Id = 181,
-                            Force = 363,
+                            Force = 1665,
                             Nom = "Naoe Kagetsuna"
                         },
                         new
                         {
                             Id = 182,
-                            Force = 1117,
+                            Force = 1993,
                             Nom = "Naoe Kanetsugu"
                         },
                         new
                         {
                             Id = 183,
-                            Force = 1736,
+                            Force = 997,
                             Nom = "Narita Kaihime"
                         },
                         new
                         {
                             Id = 184,
-                            Force = 1387,
+                            Force = 791,
                             Nom = "Nene"
                         },
                         new
                         {
                             Id = 185,
-                            Force = 10,
+                            Force = 749,
                             Nom = "Nihonmatsu Yoshitsugu"
                         },
                         new
                         {
                             Id = 186,
-                            Force = 734,
+                            Force = 100,
                             Nom = "Niimi Nishiki"
                         },
                         new
                         {
                             Id = 187,
-                            Force = 572,
+                            Force = 592,
                             Nom = "Niiro Tadamoto"
                         },
                         new
                         {
                             Id = 188,
-                            Force = 1451,
+                            Force = 1838,
                             Nom = "Niwa Nagahide"
                         },
                         new
                         {
                             Id = 189,
-                            Force = 619,
+                            Force = 1458,
                             Nom = "Niwa Nagashige"
                         },
                         new
                         {
                             Id = 190,
-                            Force = 1304,
+                            Force = 296,
                             Nom = "Oda Hiroyoshi"
                         },
                         new
                         {
                             Id = 191,
-                            Force = 1800,
+                            Force = 731,
                             Nom = "Oda Nobuhide"
                         },
                         new
                         {
                             Id = 192,
-                            Force = 1151,
+                            Force = 1535,
                             Nom = "Oda Nobukata"
                         },
                         new
                         {
                             Id = 193,
-                            Force = 28,
+                            Force = 96,
                             Nom = "Oda Nobukiyo"
                         },
                         new
                         {
                             Id = 194,
-                            Force = 9,
+                            Force = 29,
                             Nom = "Oda Nobunaga"
                         },
                         new
                         {
                             Id = 195,
-                            Force = 717,
+                            Force = 1829,
                             Nom = "Oda Nobutada"
                         },
                         new
                         {
                             Id = 196,
-                            Force = 712,
+                            Force = 102,
                             Nom = "Oda Nobutomo"
                         },
                         new
                         {
                             Id = 197,
-                            Force = 1730,
+                            Force = 1502,
                             Nom = "Oda Nobukatsu"
                         },
                         new
                         {
                             Id = 198,
-                            Force = 1092,
+                            Force = 1732,
                             Nom = "Oda Nobuyasu"
                         },
                         new
                         {
                             Id = 199,
-                            Force = 977,
+                            Force = 13,
                             Nom = "Ogasawara Shōsai"
                         },
                         new
                         {
                             Id = 200,
-                            Force = 1087,
+                            Force = 629,
                             Nom = "Ōishi Kuranosuke"
                         },
                         new
                         {
                             Id = 201,
-                            Force = 1812,
+                            Force = 1938,
                             Nom = "Okada Izō"
                         },
                         new
                         {
                             Id = 202,
-                            Force = 1786,
+                            Force = 1465,
                             Nom = "Judge Ooka"
                         },
                         new
                         {
                             Id = 203,
-                            Force = 1248,
+                            Force = 1700,
                             Nom = "Ōta Dōkan"
                         },
                         new
                         {
                             Id = 204,
-                            Force = 319,
+                            Force = 629,
                             Nom = "Ōtani Yoshitsugu"
                         },
                         new
                         {
                             Id = 205,
-                            Force = 1809,
+                            Force = 420,
                             Nom = "Ōtani Yoshiharu"
                         },
                         new
                         {
                             Id = 206,
-                            Force = 1490,
+                            Force = 1627,
                             Nom = "Ōtomo Sōrin"
                         },
                         new
                         {
                             Id = 207,
-                            Force = 796,
+                            Force = 1965,
                             Nom = "Okita Sōji"
                         },
                         new
                         {
                             Id = 208,
-                            Force = 1390,
+                            Force = 1062,
                             Nom = "Ōkubo Toshimichi"
                         },
                         new
                         {
                             Id = 209,
-                            Force = 902,
+                            Force = 1579,
                             Nom = "Okunomiya Masaie"
                         },
                         new
                         {
                             Id = 210,
-                            Force = 44,
+                            Force = 1966,
                             Nom = "Ōuchi Yoshitaka"
                         },
                         new
                         {
                             Id = 211,
-                            Force = 1606,
+                            Force = 758,
                             Nom = "Omy Yoshika"
                         },
                         new
                         {
                             Id = 212,
-                            Force = 671,
+                            Force = 1029,
                             Nom = "Pore Sufi"
                         },
                         new
                         {
                             Id = 213,
-                            Force = 1214,
+                            Force = 243,
                             Nom = "Reizei Takatoyo"
                         },
                         new
                         {
                             Id = 214,
-                            Force = 429,
+                            Force = 493,
                             Nom = "Rokkaku Sadayori"
                         },
                         new
                         {
                             Id = 215,
-                            Force = 1185,
+                            Force = 152,
                             Nom = "Rokkaku Yoshiharu"
                         },
                         new
                         {
                             Id = 216,
-                            Force = 877,
+                            Force = 1397,
                             Nom = "Rokkaku Yoshikata"
                         },
                         new
                         {
                             Id = 217,
-                            Force = 1719,
+                            Force = 1812,
                             Nom = "Rusu Masakage"
                         },
                         new
                         {
                             Id = 218,
-                            Force = 1661,
+                            Force = 926,
                             Nom = "Ryūzōji Takanobu"
                         },
                         new
                         {
                             Id = 219,
-                            Force = 1608,
+                            Force = 750,
                             Nom = "Saigo Kiyokazu"
                         },
                         new
                         {
                             Id = 220,
-                            Force = 259,
+                            Force = 1977,
                             Nom = "Saigō Masako"
                         },
                         new
                         {
                             Id = 221,
-                            Force = 345,
+                            Force = 918,
                             Nom = "Sagara Taketō"
                         },
                         new
                         {
                             Id = 222,
-                            Force = 974,
+                            Force = 1181,
                             Nom = "Saigō Takamori"
                         },
                         new
                         {
                             Id = 223,
-                            Force = 466,
+                            Force = 694,
                             Nom = "Saigo Yoshikatsu"
                         },
                         new
                         {
                             Id = 224,
-                            Force = 316,
+                            Force = 254,
                             Nom = "Saitō Dōsan"
                         },
                         new
                         {
                             Id = 225,
-                            Force = 855,
+                            Force = 1473,
                             Nom = "Saitō Hajime"
                         },
                         new
                         {
                             Id = 226,
-                            Force = 151,
+                            Force = 1015,
                             Nom = "Saito Musashibō Benkei"
                         },
                         new
                         {
                             Id = 227,
-                            Force = 292,
+                            Force = 1535,
                             Nom = "Saitō Yoshitatsu"
                         },
                         new
                         {
                             Id = 228,
-                            Force = 16,
+                            Force = 832,
                             Nom = "Sakai Tadakiyo"
                         },
                         new
                         {
                             Id = 229,
-                            Force = 157,
+                            Force = 1606,
                             Nom = "Sakai Tadashige"
                         },
                         new
                         {
                             Id = 230,
-                            Force = 1061,
+                            Force = 1064,
                             Nom = "Sakai Tadatsugu"
                         },
                         new
                         {
                             Id = 231,
-                            Force = 1009,
+                            Force = 1394,
                             Nom = "Sakai Tadayo"
                         },
                         new
                         {
                             Id = 232,
-                            Force = 280,
+                            Force = 14,
                             Nom = "Sakakibara Yasumasa"
                         },
                         new
                         {
                             Id = 233,
-                            Force = 281,
+                            Force = 1924,
                             Nom = "Sakamoto Ryōma"
                         },
                         new
                         {
                             Id = 234,
-                            Force = 207,
+                            Force = 1207,
                             Nom = "Sakuma Morimasa"
                         },
                         new
                         {
                             Id = 235,
-                            Force = 994,
+                            Force = 785,
                             Nom = "Sakuma Nobumori"
                         },
                         new
                         {
                             Id = 236,
-                            Force = 1914,
+                            Force = 647,
                             Nom = "Sanada Akihime"
                         },
                         new
                         {
                             Id = 237,
-                            Force = 4,
+                            Force = 991,
                             Nom = "Sanada Komatsuhime"
                         },
                         new
                         {
                             Id = 238,
-                            Force = 695,
+                            Force = 829,
                             Nom = "Sanada Masayuki"
                         },
                         new
                         {
                             Id = 239,
-                            Force = 125,
+                            Force = 922,
                             Nom = "Sanada Nobuyuki"
                         },
                         new
                         {
                             Id = 240,
-                            Force = 336,
+                            Force = 59,
                             Nom = "Sanada Yukimura"
                         },
                         new
                         {
                             Id = 241,
-                            Force = 1790,
+                            Force = 142,
                             Nom = "Sasaki Kojirō"
                         },
                         new
                         {
                             Id = 242,
-                            Force = 1699,
+                            Force = 167,
                             Nom = "Sassa Narimasa"
                         },
                         new
                         {
                             Id = 243,
-                            Force = 297,
+                            Force = 113,
                             Nom = "Sasuke Sarutobi"
                         },
                         new
                         {
                             Id = 244,
-                            Force = 141,
+                            Force = 1040,
                             Nom = "Serizawa Kamo"
                         },
                         new
                         {
                             Id = 245,
-                            Force = 1,
+                            Force = 1535,
                             Nom = "Shibata Katsuie"
                         },
                         new
                         {
                             Id = 246,
-                            Force = 1329,
+                            Force = 745,
                             Nom = "Shima Sakon"
                         },
                         new
                         {
                             Id = 247,
-                            Force = 1798,
+                            Force = 1600,
                             Nom = "Shimada Ichirō"
                         },
                         new
                         {
                             Id = 248,
-                            Force = 472,
+                            Force = 656,
                             Nom = "Shimazu Katsuhisa"
                         },
                         new
                         {
                             Id = 249,
-                            Force = 805,
+                            Force = 815,
                             Nom = "Shimazu Tadahisa"
                         },
                         new
                         {
                             Id = 250,
-                            Force = 1423,
+                            Force = 798,
                             Nom = "Shimazu Tadatsune"
                         },
                         new
                         {
                             Id = 251,
-                            Force = 821,
+                            Force = 731,
                             Nom = "Shimazu Tadayoshi"
                         },
                         new
                         {
                             Id = 252,
-                            Force = 1466,
+                            Force = 1677,
                             Nom = "Shimazu Takahisa"
                         },
                         new
                         {
                             Id = 253,
-                            Force = 132,
+                            Force = 1800,
                             Nom = "Shimazu Toyohisa"
                         },
                         new
                         {
                             Id = 254,
-                            Force = 1775,
+                            Force = 216,
                             Nom = "Shimazu Yoshihiro"
                         },
                         new
                         {
                             Id = 255,
-                            Force = 776,
+                            Force = 769,
                             Nom = "Shimazu Yoshihisa"
                         },
                         new
                         {
                             Id = 256,
-                            Force = 286,
+                            Force = 806,
                             Nom = "Shindou Hiroshii"
                         },
                         new
                         {
                             Id = 257,
-                            Force = 1740,
+                            Force = 347,
                             Nom = "Sogo Nagayasu"
                         },
                         new
                         {
                             Id = 258,
-                            Force = 753,
+                            Force = 178,
                             Nom = "Sue Yoshitaka"
                         },
                         new
                         {
                             Id = 259,
-                            Force = 1059,
+                            Force = 1082,
                             Nom = "Tachibana Muneshige"
                         },
                         new
                         {
                             Id = 260,
-                            Force = 280,
+                            Force = 394,
                             Nom = "Tachibana Dōsetsu"
                         },
                         new
                         {
                             Id = 261,
-                            Force = 898,
+                            Force = 368,
                             Nom = "Tachibana Ginchiyo"
                         },
                         new
                         {
                             Id = 262,
-                            Force = 1915,
+                            Force = 211,
                             Nom = "Taigen Sessai"
                         },
                         new
                         {
                             Id = 263,
-                            Force = 832,
+                            Force = 822,
                             Nom = "Taira no Kiyomori"
                         },
                         new
                         {
                             Id = 264,
-                            Force = 44,
+                            Force = 869,
                             Nom = "Taira Masakado"
                         },
                         new
                         {
                             Id = 265,
-                            Force = 1692,
+                            Force = 827,
                             Nom = "Takahashi Shigetane"
                         },
                         new
                         {
                             Id = 266,
-                            Force = 1930,
+                            Force = 515,
                             Nom = "Takenaka Shigeharu"
                         },
                         new
                         {
                             Id = 267,
-                            Force = 1637,
+                            Force = 309,
                             Nom = "Takasugi Shinsaku"
                         },
                         new
                         {
                             Id = 268,
-                            Force = 1743,
+                            Force = 323,
                             Nom = "Takayama Justo"
                         },
                         new
                         {
                             Id = 269,
-                            Force = 1690,
+                            Force = 1206,
                             Nom = "Takayama Ukon"
                         },
                         new
                         {
                             Id = 270,
-                            Force = 178,
+                            Force = 395,
                             Nom = "Takechi Hanpeita"
                         },
                         new
                         {
                             Id = 271,
-                            Force = 1994,
+                            Force = 807,
                             Nom = "Takeda Katsuyori"
                         },
                         new
                         {
                             Id = 272,
-                            Force = 1217,
+                            Force = 1269,
                             Nom = "Takeda Nobukatsu"
                         },
                         new
                         {
                             Id = 273,
-                            Force = 1230,
+                            Force = 1991,
                             Nom = "Takeda Nobushige"
                         },
                         new
                         {
                             Id = 274,
-                            Force = 940,
+                            Force = 225,
                             Nom = "Takeda Shingen"
                         },
                         new
                         {
                             Id = 275,
-                            Force = 1249,
+                            Force = 1282,
                             Nom = "Takenaka Hanbei"
                         },
                         new
                         {
                             Id = 276,
-                            Force = 371,
+                            Force = 1697,
                             Nom = "Tani Tadasumi"
                         },
                         new
                         {
                             Id = 277,
-                            Force = 440,
+                            Force = 1881,
                             Nom = "Tōdō Takatora"
                         },
                         new
                         {
                             Id = 278,
-                            Force = 1851,
+                            Force = 1509,
                             Nom = "Toki Yorinari"
                         },
                         new
                         {
                             Id = 279,
-                            Force = 157,
+                            Force = 1534,
                             Nom = "Tochimitsu Gantyoki"
                         },
                         new
                         {
                             Id = 280,
-                            Force = 583,
+                            Force = 66,
                             Nom = "Tokugawa Ieyasu"
                         },
                         new
                         {
                             Id = 281,
-                            Force = 836,
+                            Force = 337,
                             Nom = "Tokugawa Hidetada"
                         },
                         new
                         {
                             Id = 282,
-                            Force = 1724,
+                            Force = 1203,
                             Nom = "Tokugawa Nariaki"
                         },
                         new
                         {
                             Id = 283,
-                            Force = 1248,
+                            Force = 673,
                             Nom = "Tokugawa Yoshinobu"
                         },
                         new
                         {
                             Id = 284,
-                            Force = 164,
+                            Force = 1053,
                             Nom = "Torii Mototada"
                         },
                         new
                         {
                             Id = 285,
-                            Force = 1201,
+                            Force = 611,
                             Nom = "Toyotomi Hidenaga"
                         },
                         new
                         {
                             Id = 286,
-                            Force = 519,
+                            Force = 1740,
                             Nom = "Toyotomi Hideyoshi"
                         },
                         new
                         {
                             Id = 287,
-                            Force = 1026,
+                            Force = 1129,
                             Nom = "Toyotomi Hideyori"
                         },
                         new
                         {
                             Id = 288,
-                            Force = 1536,
+                            Force = 470,
                             Nom = "Tozuka Tadaharu"
                         },
                         new
                         {
                             Id = 289,
-                            Force = 1471,
+                            Force = 1754,
                             Nom = "Tsukahara Bokuden"
                         },
                         new
                         {
                             Id = 290,
-                            Force = 624,
+                            Force = 76,
                             Nom = "Uesugi Kagekatsu"
                         },
                         new
                         {
                             Id = 291,
-                            Force = 1440,
+                            Force = 1254,
                             Nom = "Uesugi Kagetora"
                         },
                         new
                         {
                             Id = 292,
-                            Force = 224,
+                            Force = 1253,
                             Nom = "Uesugi Kenshin"
                         },
                         new
                         {
                             Id = 293,
-                            Force = 13,
+                            Force = 1847,
                             Nom = "Ujiie Naotomo"
                         },
                         new
                         {
                             Id = 294,
-                            Force = 1410,
+                            Force = 1820,
                             Nom = "Ukita Naoie"
                         },
                         new
                         {
                             Id = 295,
-                            Force = 1940,
+                            Force = 676,
                             Nom = "Ukita Okiie"
                         },
                         new
                         {
                             Id = 296,
-                            Force = 957,
+                            Force = 1480,
                             Nom = "Umezawa Michiharu"
                         },
                         new
                         {
                             Id = 297,
-                            Force = 720,
+                            Force = 345,
                             Nom = "Usami Sadamitsu"
                         },
                         new
                         {
                             Id = 298,
-                            Force = 1142,
+                            Force = 767,
                             Nom = "Uyama Hisanobu"
                         },
                         new
                         {
                             Id = 299,
-                            Force = 343,
+                            Force = 1701,
                             Nom = "Wada Shinsuke"
                         },
                         new
                         {
                             Id = 300,
-                            Force = 377,
+                            Force = 911,
                             Nom = "Watanabe Kazan"
                         },
                         new
                         {
                             Id = 301,
-                            Force = 531,
+                            Force = 1813,
                             Nom = "Watanabe no Tsuna"
                         },
                         new
                         {
                             Id = 302,
-                            Force = 695,
+                            Force = 953,
                             Nom = "Yasumero Kenshin"
                         },
                         new
                         {
                             Id = 303,
-                            Force = 671,
+                            Force = 633,
                             Nom = "Yagyū Jūbei Mitsuyoshi"
                         },
                         new
                         {
                             Id = 304,
-                            Force = 49,
+                            Force = 789,
                             Nom = "Yagyū Munenori"
                         },
                         new
                         {
                             Id = 305,
-                            Force = 361,
+                            Force = 1531,
                             Nom = "Yamauchi Kazutoyo"
                         },
                         new
                         {
                             Id = 306,
-                            Force = 1485,
+                            Force = 791,
                             Nom = "Yamada Arinaga"
                         },
                         new
                         {
                             Id = 307,
-                            Force = 408,
+                            Force = 1831,
                             Nom = "Yamada Arinobu"
                         },
                         new
                         {
                             Id = 308,
-                            Force = 567,
+                            Force = 1015,
                             Nom = "Yamada Nagamasa"
                         },
                         new
                         {
                             Id = 309,
-                            Force = 245,
+                            Force = 1572,
                             Nom = "Yamagata Masakage"
                         },
                         new
                         {
                             Id = 310,
-                            Force = 1001,
+                            Force = 110,
                             Nom = "Yamakawa Hiroshi"
                         },
                         new
                         {
                             Id = 311,
-                            Force = 1678,
+                            Force = 432,
                             Nom = "Yamakawa Kenjirō"
                         },
                         new
                         {
                             Id = 312,
-                            Force = 1495,
+                            Force = 1145,
                             Nom = "Yamakawa Naoe"
                         },
                         new
                         {
                             Id = 313,
-                            Force = 1711,
+                            Force = 1879,
                             Nom = "Yamanaka Yukimori"
                         },
                         new
                         {
                             Id = 314,
-                            Force = 1383,
+                            Force = 1853,
                             Nom = "Yamanami Keisuke"
                         },
                         new
                         {
                             Id = 315,
-                            Force = 152,
+                            Force = 1385,
                             Nom = "Yamaoka Tesshū"
                         },
                         new
                         {
                             Id = 316,
-                            Force = 325,
+                            Force = 438,
                             Nom = "Yanagawa Kenzaburo"
                         },
                         new
                         {
                             Id = 317,
-                            Force = 1282,
+                            Force = 175,
                             Nom = "Yanagisawa Yoshiyasu"
                         },
                         new
                         {
                             Id = 318,
-                            Force = 940,
+                            Force = 614,
                             Nom = "Yonekura Shigetsugu"
                         },
                         new
                         {
                             Id = 319,
-                            Force = 1308,
+                            Force = 1824,
                             Nom = "Yūki Hideyasu"
                         },
                         new
                         {
                             Id = 320,
-                            Force = 85,
+                            Force = 451,
                             Nom = "Yasuke"
                         });
                 });

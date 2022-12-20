@@ -20,11 +20,52 @@ namespace TpDojo.Controllers
             _context = context;
         }
 
-        // GET: Samurais
+/*        // GET: Samurais
         public async Task<IActionResult> Index()
         {
             var tpDojoContext = _context.Samurai.Include(s => s.Arme);
             return View(await tpDojoContext.ToListAsync());
+        }    */ 
+        
+        // GET: Samurais
+        public async Task<IActionResult> Index(string sortOrder, string searchString)
+        {
+            ViewData["NameSortParam"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["ForceSortParam"] = sortOrder == "Force" ? "force_asc" : "Force";
+
+            ViewData["CurrentFilter"] = searchString;
+
+            
+            var samurais = _context.Samurai.Select(s => s);
+
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                samurais = samurais.Where(s => s.Nom.StartsWith(searchString));
+            }
+
+           
+
+         //   var tpDojoContext = _context.Samurai.Include(s => s.Arme);
+
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    samurais = samurais.OrderByDescending(s => s.Nom).Include(s => s.Arme);
+                    break;
+
+                case "Force":
+                    samurais = samurais.OrderBy(s => s.Force).Include(s => s.Arme);
+                    break;
+                default: 
+                    samurais = samurais.OrderBy(s => s.Id).Include(s => s.Arme);
+                    break;
+            }
+
+
+
+           // return View(await tpDojoContext.ToListAsync());
+            return View(samurais);
         }
 
         // GET: Samurais/Details/5
