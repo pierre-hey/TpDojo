@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using BO;
+using System.Reflection.Metadata;
 
 namespace TpDojo.Data
 {
@@ -17,5 +18,15 @@ namespace TpDojo.Data
         public DbSet<BO.Arme> Arme { get; set; } = default!;
 
         public DbSet<BO.Samurai> Samurai { get; set; }
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder
+                .Entity<Samurai>()
+                .HasOne(s => s.Arme)
+                .WithOne()
+                .OnDelete(DeleteBehavior.SetNull);
+        }
     }
 }

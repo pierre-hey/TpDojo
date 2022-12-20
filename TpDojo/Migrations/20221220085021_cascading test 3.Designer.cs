@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TpDojo.Data;
 
@@ -11,9 +12,10 @@ using TpDojo.Data;
 namespace TpDojo.Migrations
 {
     [DbContext(typeof(TpDojoContext))]
-    partial class TpDojoContextModelSnapshot : ModelSnapshot
+    [Migration("20221220085021_cascading test 3")]
+    partial class cascadingtest3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

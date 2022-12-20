@@ -10,7 +10,7 @@ namespace TPDojo.Models
 
         public int Force { get; set; }
 
-        public int ArmeId { get; set; }
+        public int? ArmeId { get; set; }
 
         public SelectList ArmesSelect { get; set; }
     }

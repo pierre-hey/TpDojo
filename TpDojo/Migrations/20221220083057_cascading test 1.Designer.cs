@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TpDojo.Data;
 
@@ -11,9 +12,10 @@ using TpDojo.Data;
 namespace TpDojo.Migrations
 {
     [DbContext(typeof(TpDojoContext))]
-    partial class TpDojoContextModelSnapshot : ModelSnapshot
+    [Migration("20221220083057_cascading test 1")]
+    partial class cascadingtest1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -61,9 +63,7 @@ namespace TpDojo.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ArmeId")
-                        .IsUnique()
-                        .HasFilter("[ArmeId] IS NOT NULL");
+                    b.HasIndex("ArmeId");
 
                     b.ToTable("Samurai");
                 });
@@ -71,9 +71,8 @@ namespace TpDojo.Migrations
             modelBuilder.Entity("BO.Samurai", b =>
                 {
                     b.HasOne("BO.Arme", "Arme")
-                        .WithOne()
-                        .HasForeignKey("BO.Samurai", "ArmeId")
-                        .OnDelete(DeleteBehavior.SetNull);
+                        .WithMany()
+                        .HasForeignKey("ArmeId");
 
                     b.Navigation("Arme");
                 });

@@ -10,6 +10,6 @@
 
         public Arme? Arme { get; set; }
 
-        public int ArmeId { get; set; }
+        public int? ArmeId { get; set; }
     }
 }
