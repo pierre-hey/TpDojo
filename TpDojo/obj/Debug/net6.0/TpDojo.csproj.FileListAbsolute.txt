@@ -270,3 +270,10 @@ C:\Users\Pierre\source\repos\TpDojo\TpDojo\obj\Debug\net6.0\refint\TpDojo.dll
 C:\Users\Pierre\source\repos\TpDojo\TpDojo\obj\Debug\net6.0\TpDojo.pdb
 C:\Users\Pierre\source\repos\TpDojo\TpDojo\obj\Debug\net6.0\TpDojo.genruntimeconfig.cache
 C:\Users\Pierre\source\repos\TpDojo\TpDojo\obj\Debug\net6.0\ref\TpDojo.dll
+C:\Users\Pierre\source\repos\TPDojo\TpDojo\bin\Debug\net6.0\System.Web.Mvc.dll
+C:\Users\Pierre\source\repos\TPDojo\TpDojo\bin\Debug\net6.0\System.Web.Razor.dll
+C:\Users\Pierre\source\repos\TPDojo\TpDojo\bin\Debug\net6.0\System.Web.Helpers.dll
+C:\Users\Pierre\source\repos\TPDojo\TpDojo\bin\Debug\net6.0\System.Web.WebPages.Deployment.dll
+C:\Users\Pierre\source\repos\TPDojo\TpDojo\bin\Debug\net6.0\System.Web.WebPages.Razor.dll
+C:\Users\Pierre\source\repos\TPDojo\TpDojo\bin\Debug\net6.0\System.Web.WebPages.dll
+C:\Users\Pierre\source\repos\TPDojo\TpDojo\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll

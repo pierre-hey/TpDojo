@@ -31,8 +31,10 @@ namespace TpDojo.Controllers
             ViewData["CurrentSort"] = sortOrder;
             ViewData["NameSortParam"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewData["ForceSortParam"] = sortOrder == "Force" ? "force_asc" : "Force";
-            /*ViewData["ArmeSortParam"] = sortOrder == "Arme" ? "arme_asc" : "Arme";*/
-            
+            ViewData["ArmeSortParam"] = sortOrder == "Arme" ? "arme_asc" : "Arme";
+            ViewData["IdSortParam"] = String.IsNullOrEmpty(sortOrder) ? "id_desc" : "";
+            ViewData["PotentielSortParam"] = sortOrder == "Potentiel" ? "potentiel_desc" : "Potentiel";
+
 
             if (searchString != null)
             {
@@ -54,17 +56,28 @@ namespace TpDojo.Controllers
 
             switch (sortOrder)
             {
+                case "id_desc":
+                    samurais = samurais.OrderByDescending(s => s.Id);
+                    break;
+
                 case "name_desc":
                     samurais = samurais.OrderByDescending(s => s.Nom);
                     break;
 
                 case "Force":
+                    samurais = samurais.OrderByDescending(s => s.Force);
+                    break;
+
+                case "force_asc":
                     samurais = samurais.OrderBy(s => s.Force);
                     break;
-/*
+
                 case "Arme":
-                    samurais = samurais.Include(s=>s.Arme).OrderBy(s => s.Arme.Nom);
-                    break;*/
+                    samurais = samurais.Include(s=>s.Arme).OrderByDescending(s => s.Arme.Nom);
+                    break;
+                case "arme_asc":
+                    samurais = samurais.Include(s => s.Arme).OrderBy(s => s.Arme.Nom);
+                    break;     
 
                 default: 
                     samurais = samurais.OrderBy(s => s.Id);
@@ -93,138 +106,53 @@ namespace TpDojo.Controllers
             {
                 return NotFound();
             }
-
      
-            int potentielDegat = (samurai.Force + (samurai.Arme is null ? 0 : samurai.Arme.Degat)) * ((samurai.ArtMartiaux is null ? 1 : samurai.ArtMartiaux.Count() + 1));
+            int potentielDegat = (samurai.Force + (samurai.Arme is null ? 0 : samurai.Arme.Degat)) 
+                                    * ((samurai.ArtMartiaux is null ? 1 : samurai.ArtMartiaux.Count() + 1));
             ViewData["potentielDegat"] = potentielDegat;
 
             return View(samurai);
         }
 
-/*        // GET: Samurais/Create
-        public IActionResult Create()
-        {
-            ViewData["ArmeId"] = new SelectList(_context.Arme, "Id", "Id");
-            return View();
-        }
-
-        // POST: Samurais/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nom,Force,ArmeId")] Samurai samurai)
-        {
-            if (ModelState.IsValid)
-            {
-                _context.Add(samurai);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["ArmeId"] = new SelectList(_context.Arme, "Id", "Id", samurai.ArmeId);
-            return View(samurai);
-        }*/
-
-
         // GET: Samurais/Create
         public IActionResult Create()
         {
-            SamuraiVM samuraiVM = new SamuraiVM();
+            SamuraiVM samuraiVM = new SamuraiVM
+            {
+                Samurai = new Samurai(),
+                ArmesSelect = BuildSelectListArme(),                
+                ArtsMartiauxSelect = BuildSelectListArtsMartiaux(),
 
-            samuraiVM.ArmesSelect = new SelectList(_context.Arme, "Id", "Nom"); ;
-            samuraiVM.ArtMartiauxSelect = new SelectList(_context.ArtMartial, "Id", "Nom");
-
-            ViewData["ArmeId"] = new SelectList(_context.Arme, "Id", "Nom");
-            ViewData["ArtMartiauxId"] = new SelectList(_context.ArtMartial, "Id", "Nom");
-
-            // ViewData["ArmeId"] = new SelectList(selectArme, "Id", "Nom");
+            };
+            
             return View(samuraiVM);
-   //         return View();
         }
-
-
-        /*        // POST: Samurais/Create
-                // To protect from overposting attacks, enable the specific properties you want to bind to.
-                // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-                [HttpPost]
-                [ValidateAntiForgeryToken]
-                public async Task<IActionResult> Create([Bind("Id,Nom,Force,ArmeId,ArtMartiauxId")] Samurai samurai)
-                {
-
-                    *//*     Samurai samurai = new Samurai();
-                         samurai.Nom = samuraiVM.Nom;
-                         samurai.Arme = _context.Arme.Find(samuraiVM.ArmeId);
-                         samurai.Force= samuraiVM.Force;*//*
-
-                    Console.WriteLine($"#################");
-                    Console.WriteLine($"POST Samurai => Id: {samurai.Id}" +
-                        $"- Nom: {samurai.Nom} " +
-                        $"- ArmeId: {samurai.ArmeId} " +
-                        $"- Arme: {_context.Arme.Find(samurai.ArmeId).Nom}");
-
-
-                    Console.WriteLine(Environment.NewLine + "Détails Art martiaux :");
-
-
-                    foreach (var art in samurai.ArtMartiaux)
-                    {
-                        Console.WriteLine($"      Art martial : {_context.ArtMartial.Find(art.Id)}");
-                    }
-
-                    Console.WriteLine($"#################");
-
-
-                    if (ModelState.IsValid)
-                    {
-                        _context.Add(samurai);
-                        await _context.SaveChangesAsync();
-                        return RedirectToAction(nameof(Index));
-                    }
-                    ViewData["ArmeId"] = new SelectList(_context.Arme, "Id", "Nom", samurai.ArmeId);
-                    ViewData["ArtMartiauxId"] = new SelectList(_context.ArtMartial, "Id", "Nom");
-                    //  SelectList selectArme = new SelectList(_context.Arme, "Id", "Nom");
-                    //  SelectList selectArtMartiaux = new SelectList(_context.ArtMartial, "Id", "Nom");
-
-
-                    *//*     samuraiVM.ArmesSelect = selectArme;*/
-        /*return View(samuraiVM);*//*
-        return View(samurai);
-    }
-    */
-
 
         // POST: Samourais/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Nom,Force,ArmeId,ArtMartiauxId")] SamuraiVM samuraiVM)
+        public async Task<IActionResult> Create(SamuraiVM samuraiVM)
         {
-
-            List<ArtMartial> artMartiauxSamurai= new List<ArtMartial>();
-            foreach (var art in samuraiVM.ArtMartiauxId)
-            {
-                ArtMartial artMartial = _context.ArtMartial.Find(art);
-                artMartiauxSamurai.Add(artMartial);
-            }
-
-            Samurai samurai = new Samurai
-            {
-                Nom = samuraiVM.Nom,
-                Force = samuraiVM.Force,
-                Arme = _context.Arme?.Find(samuraiVM.ArmeId),
-                ArtMartiaux = artMartiauxSamurai,
-            };
 
             if (ModelState.IsValid)
             {
-                _context.Add(samurai);
+                if(samuraiVM.Samurai.ArmeId != null && _context.Samurai.Any(s => s.ArmeId == samuraiVM.Samurai.ArmeId))
+                {
+                    return BadRequest();
+                }
+
+                samuraiVM.Samurai.ArtMartiaux = _context.ArtMartial.Where(a => samuraiVM.IdsArtsMartiaux.Contains(a.Id)).ToList();
+
+                _context.Add(samuraiVM.Samurai);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-          
-            ViewData["ArmeId"] = new SelectList(_context.Arme, "Id", "Nom", samuraiVM.ArmeId);
-            ViewData["ArtMartiauxId"] = new SelectList(_context.ArtMartial, "Id", "Nom");
+           
+            samuraiVM.ArmesSelect = BuildSelectListArme();
+            samuraiVM.ArtsMartiauxSelect = BuildSelectListArtsMartiaux();
+            
             return View(samuraiVM);
         }
 
@@ -237,44 +165,24 @@ namespace TpDojo.Controllers
                 return NotFound();
             }
 
-           // var samurai = await _context.Samurai.FindAsync(id);
+            var samuraiAModifie = await _context.Samurai
+                .Include(s => s.Arme)
+                .Include(s => s.ArtMartiaux)
+                .FirstOrDefaultAsync(s => s.Id == id);
 
-            var samurai = await _context.Samurai
-                .Include(sam => sam.Arme)
-                .Include(samu => samu.ArtMartiaux)
-                .FirstOrDefaultAsync(samur => samur.Id == id);
-
-
-            if (samurai == null)
+            if (samuraiAModifie == null)
             {
                 return NotFound();
             }
 
             SamuraiVM samuraiVM = new SamuraiVM
             {
-                Nom = samurai.Nom,
-                Force = samurai.Force,
-                Id = samurai.Id,
-                ArmeId = samurai.ArmeId,
-                ArmesSelect = new SelectList(_context.Arme, "Id", "Nom"),
-                ArtMartiauxId = samurai.ArtMartiaux.Select(a => a.Id).ToList(),
-                ArtMartiauxSelect = new SelectList(_context.ArtMartial, "Id", "Nom"),
+                Samurai = samuraiAModifie,
+                IdsArtsMartiaux = samuraiAModifie.ArtMartiaux.Select(a => a.Id).ToList(),
+                ArmesSelect = BuildSelectListArme(id),                
+                ArtsMartiauxSelect = BuildSelectListArtsMartiaux(),
             };
 
-            Console.WriteLine($"######################" +
-                                $"{Environment.NewLine}" +
-                                $"Samurai: {samuraiVM.Nom}" +
-                                $" Arme: {samuraiVM.ArmeId}" +
-                                $"{Environment.NewLine}");
-            foreach (var i in samuraiVM.ArtMartiauxId)
-            {
-                Console.WriteLine($"id Art martial : {i}");
-            }
-
-
-      //      ViewData["ArmeId"] = new SelectList(_context.Arme, "Id", "Nom", samuraiVM.ArmeId);
-         //   ViewData["ArtMartiauxId"] = new SelectList(_context.ArtMartial, "Id", "Nom");
-            
             return View(samuraiVM);
         }
 
@@ -283,9 +191,9 @@ namespace TpDojo.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nom,Force,ArmeId")] Samurai samurai)
+        public async Task<IActionResult> Edit(int id, SamuraiVM samuraiVM)
         {
-            if (id != samurai.Id)
+            if (id != samuraiVM.Samurai.Id)
             {
                 return NotFound();
             }
@@ -294,12 +202,39 @@ namespace TpDojo.Controllers
             {
                 try
                 {
-                    _context.Update(samurai);
+                   Samurai? samurai = _context.Samurai.Include(s => s.Arme)
+                                    .Include(s => s.ArtMartiaux)
+                                    .FirstOrDefault(s => s.Id == id);
+
+                    if(samurai is null) return NotFound();
+                   
+
+                    // Si l'arme est null && si l'id du samurai est différent de celui que l'on modifie && si l'arme du samurai est déjà utilisé
+                    if (samuraiVM.Samurai.ArmeId != null && _context.Samurai.Any(s => s.Id != id && s.ArmeId == samuraiVM.Samurai.ArmeId))
+                    {
+                        return BadRequest();
+                    }
+
+                    samurai.Nom = samuraiVM.Samurai.Nom;
+                    samurai.Force = samuraiVM.Samurai.Force;
+                    samurai.ArmeId = samuraiVM.Samurai.ArmeId;
+
+                    if(samuraiVM.IdsArtsMartiaux != null && samuraiVM.IdsArtsMartiaux.Any())
+                    {
+                       samurai.ArtMartiaux = _context.ArtMartial.Where(a => samuraiVM.IdsArtsMartiaux
+                                                                .Contains(a.Id))
+                                                                .ToList();
+                    }
+                    else
+                    {
+                        samurai.ArtMartiaux = new List<ArtMartial>();
+                    }
+                    //_context.Update(samuraiVM.Samurai);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!SamuraiExists(samurai.Id))
+                    if (!SamuraiExists(samuraiVM.Samurai.Id))
                     {
                         return NotFound();
                     }
@@ -310,8 +245,10 @@ namespace TpDojo.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["ArmeId"] = new SelectList(_context.Arme, "Id", "Id", samurai.ArmeId);
-            return View(samurai);
+
+            samuraiVM.ArmesSelect = BuildSelectListArme(id);
+            samuraiVM.ArtsMartiauxSelect = BuildSelectListArme();
+            return View(samuraiVM.Samurai);
         }
 
         // GET: Samurais/Delete/5
@@ -327,8 +264,10 @@ namespace TpDojo.Controllers
                 .Include(s => s.ArtMartiaux)
                 .FirstOrDefaultAsync(m => m.Id == id);
 
-            int potentielDegat = (samurai.Force + (samurai.Arme is null ? 0 : samurai.Arme.Degat)) * ((samurai.ArtMartiaux is null ? 1 : samurai.ArtMartiaux.Count() + 1));
-            ViewData["potentielDegat"] = potentielDegat;
+            //int potentielDegat = (samurai.Force + (samurai.Arme is null ? 0 : samurai.Arme.Degat)) 
+           //                                                 * ((samurai.ArtMartiaux is null ? 1 : samurai.ArtMartiaux.Count() + 1));
+            //ViewData["potentielDegat"] = potentielDegat;
+
             if (samurai == null)
             {
                 return NotFound();
@@ -360,5 +299,18 @@ namespace TpDojo.Controllers
         {
           return _context.Samurai.Any(e => e.Id == id);
         }
+
+        private SelectList BuildSelectListArme(int? samuraiId = null)
+         {
+             return new SelectList(_context.Arme
+                                         .Where(a => a.Samurai == null || a.Samurai.Id == samuraiId)
+                                         .ToList(), "Id", "Nom");
+         }
+
+        private SelectList BuildSelectListArtsMartiaux()
+        {
+            return new SelectList(_context.ArtMartial, "Id", "Nom");
+        }
+
     }
 }

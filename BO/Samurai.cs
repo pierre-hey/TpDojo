@@ -1,23 +1,37 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace BO
 {
-    public class Samurai
+    public class Samurai : Entite
     {
-        public int Id { get; set; }
-        
-        [Required]
-        public string Nom { get; set; }
-
         [Required]
         public int Force { get; set; }
 
         public Arme? Arme { get; set; }
 
+        [DisplayName("Arme")]
         public int? ArmeId { get; set; }
 
         public List<ArtMartial>? ArtMartiaux { get; set; } = new List<ArtMartial>();
 
-   //     public List<int>? ArtMartiauxIds { get; set; } = new List<int>();
+
+        public int Potentiel
+        {
+            get
+            {
+                int p = Force;
+                if (ArmeId != null)
+                {
+                    p += Arme.Degat;
+                }
+                if (ArtMartiaux != null && ArtMartiaux.Any())
+                {
+                    p *= ArtMartiaux.Count + 1;
+                }
+                return p;
+            }
+        }
+     
     }
 }

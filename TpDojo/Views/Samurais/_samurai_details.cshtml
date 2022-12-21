@@ -6,15 +6,19 @@
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Nom)
         </dd>
+
+
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Force)
         </dt>
         <dd class = "col-sm-10">
             @Html.DisplayFor(model => model.Force)
         </dd>
+
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Arme)
         </dt>
+
         <dd class = "col-sm-10">
         @Html.DisplayFor(model => model.Arme.Nom) - @Html.DisplayFor(model => model.Arme.Degat)
         </dd>
@@ -34,10 +38,10 @@
 
 
     <dt class="col-sm-2">
-        Potentiel
+        @Html.DisplayNameFor(model => model.Potentiel)
     </dt>
     <dd class="col-sm-10">
-        @ViewData["potentielDegat"]
+        @Html.DisplayFor(model => model.Potentiel)
     </dd>
 
     </dl>

@@ -1,16 +1,16 @@
 ﻿#nullable disable
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace BO
 {
-    public class Arme
+    public class Arme : Entite
     {
-        public int Id { get; set; }
-
-        [Required]
-        public string Nom { get; set; }
-
+        [DisplayName ("Dégats")]
         public int Degat { get; set; }
+
+        [DisplayName("Propriétaire")]
+        public Samurai Samurai { get; set; }
 
     }
 }

@@ -2,31 +2,29 @@
 
 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 <div class="form-group">
-    <label asp-for="Nom" class="control-label"></label>
-    <input asp-for="Nom" class="form-control" />
-    <span asp-validation-for="Nom" class="text-danger"></span>
+    <label asp-for="Samurai.Nom" class="control-label"></label>
+    <input asp-for="Samurai.Nom" class="form-control" />
+    <span asp-validation-for="Samurai.Nom" class="text-danger"></span>
 </div>
 <div class="form-group">
-    <label asp-for="Force" class="control-label"></label>
-    <input asp-for="Force" class="form-control" />
-    <span asp-validation-for="Force" class="text-danger"></span>
+    <label asp-for="Samurai.Force" class="control-label"></label>
+    <input asp-for="Samurai.Force" class="form-control" />
+    <span asp-validation-for="Samurai.Force" class="text-danger"></span>
 </div>
 
 <div class="form-group">
-    <label class="control-label">Arme</label>
-    <select asp-for="ArmeId" class="form-control" asp-items="Model.ArmesSelect">
+    <label class="control-label" asp-for="Samurai.ArmeId"></label>
+    <select asp-for="Samurai.ArmeId" class="form-control" asp-items="Model.ArmesSelect">
         <option value="">{aucune arme}</option>
     </select>
-@*    <select asp-for="ArmeId" class="form-control" asp-items="ViewBag.ArmeId">
-        <option value=""> -- aucune arme -- </option>
-    </select>*@
+    <span asp-validation-for="Samurai.ArmeId" class="text-danger"></span>
 </div>
 
 <div class="form-group">
-    <label class="control-label">Art martiaux</label>
-    <select asp-for="ArtMartiauxId" asp-items="Model.ArtMartiauxSelect" class="form-select">
-    
-      </select>
+    <label class="control-label" asp-for="Samurai.ArtMartiaux">Art martiaux</label>
+    <select asp-for="IdsArtsMartiaux" asp-items="Model.ArtsMartiauxSelect" class="form-select">
+    </select>
+    <span asp-validation-for="IdsArtsMartiaux" class="text-danger"></span>
     
 @*    <select asp-for="ArtMartiauxId" class="form-control" asp-items="ViewBag.ArtMartiauxId">
         <option value=""> -- aucun art -- </option>

@@ -26,8 +26,10 @@
     <thead>
         <tr>
             <th>
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["IdSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Id</a>
+            </th>
+            <th>
                 <a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Nom</a>
-                @*<a asp-action="Index" asp-route-sortOrder="@ViewData["NameSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">@Html.DisplayNameFor(model => model.Nom)</a>*@
                 @*@Html.DisplayNameFor(model => model.Nom)*@
             </th>
             <th>
@@ -36,8 +38,13 @@
             </th>
             <th>
                 @*@Html.DisplayNameFor(model => model.Arme)*@
-                @*<a asp-action="Index" asp-route-sortOrder="@ViewData["ArmeSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Arme</a>*@
-                Arme
+                <a asp-action="Index" asp-route-sortOrder="@ViewData["ArmeSortParam"]" asp-route-currentFilter="@ViewData["CurrentFilter"]">Arme</a>
+            </th>
+            <th>
+                Arts martiaux
+            </th>
+            <th>
+               Potentiel
             </th>
             <th></th>
         </tr>
@@ -45,15 +52,25 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <td>@Html.DisplayFor(modelItem => item.Id)</td>
+            <td>@Html.DisplayFor(modelItem => item.Nom)</td>
+            <td>@Html.DisplayFor(modelItem => item.Force)</td>
             <td>
-                @Html.DisplayFor(modelItem => item.Nom)
+                <a class="nav-link" asp-controller="Armes" asp-action="Details" asp-route-id="@item.ArmeId">
+                    @Html.DisplayFor(modelItem => item.Arme.Nom) - @Html.DisplayFor(modelItem => item.Arme.Degat)
+                </a>  
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Force)
+                <ul>
+                    @foreach(var a in item.ArtMartiaux)
+                    {
+                        <li>@a.Nom</li>
+                    }
+                </ul>                    
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Arme.Nom)
-            </td>
+
+            <td>@Html.DisplayFor(modelItem => item.Potentiel)</td>
+
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |

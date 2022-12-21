@@ -22,7 +22,7 @@ namespace TpDojo.Controllers
         // GET: Armes
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Arme.ToListAsync());
+              return View(await _context.Arme.Include(a=>a.Samurai).ToListAsync());
         }
 
         // GET: Armes/Details/5
@@ -34,6 +34,7 @@ namespace TpDojo.Controllers
             }
 
             var arme = await _context.Arme
+                .Include(a => a.Samurai)
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (arme == null)
             {

@@ -1,21 +1,19 @@
-﻿using Microsoft.AspNetCore.Mvc.Rendering;
+﻿#nullable disable
+using BO;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.ComponentModel;
 
 namespace TPDojo.Models
 {
     public class SamuraiVM
     {
-        public int Id { get; set; }
-
-        public string Nom { get; set; }
-
-        public int Force { get; set; }
-
-        public int? ArmeId { get; set; }
+        public Samurai Samurai { get; set; }
 
         public SelectList? ArmesSelect { get; set; }
 
-        public List<int>? ArtMartiauxId { get; set; } = new List<int>();
+        [DisplayName("Art Martiaux pratiqués")]
+        public List<int>? IdsArtsMartiaux { get; set; } = new List<int>();
 
-        public SelectList? ArtMartiauxSelect { get; set; }
+        public SelectList? ArtsMartiauxSelect { get; set; }
     }
 }
