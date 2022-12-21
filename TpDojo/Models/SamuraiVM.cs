@@ -12,6 +12,10 @@ namespace TPDojo.Models
 
         public int? ArmeId { get; set; }
 
-        public SelectList ArmesSelect { get; set; }
+        public SelectList? ArmesSelect { get; set; }
+
+        public List<int>? ArtMartiauxId { get; set; } = new List<int>();
+
+        public SelectList? ArtMartiauxSelect { get; set; }
     }
 }

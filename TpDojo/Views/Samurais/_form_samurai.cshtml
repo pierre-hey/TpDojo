@@ -11,8 +11,24 @@
     <input asp-for="Force" class="form-control" />
     <span asp-validation-for="Force" class="text-danger"></span>
 </div>
+
 <div class="form-group">
-    <label asp-for="ArmeId" class="control-label"></label>
-    <select asp-for="ArmeId" class="form-control" asp-items="Model.ArmesSelect"><option>{aucune arme}</option></select>
+    <label class="control-label">Arme</label>
+    <select asp-for="ArmeId" class="form-control" asp-items="Model.ArmesSelect">
+        <option value="">{aucune arme}</option>
+    </select>
+@*    <select asp-for="ArmeId" class="form-control" asp-items="ViewBag.ArmeId">
+        <option value=""> -- aucune arme -- </option>
+    </select>*@
+</div>
+
+<div class="form-group">
+    <label class="control-label">Art martiaux</label>
+    <select asp-for="ArtMartiauxId" asp-items="Model.ArtMartiauxSelect" class="form-select">
     
+      </select>
+    
+@*    <select asp-for="ArtMartiauxId" class="form-control" asp-items="ViewBag.ArtMartiauxId">
+        <option value=""> -- aucun art -- </option>
+    </select>*@
 </div>

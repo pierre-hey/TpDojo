@@ -15,5 +15,9 @@ namespace BO
         public Arme? Arme { get; set; }
 
         public int? ArmeId { get; set; }
+
+        public List<ArtMartial>? ArtMartiaux { get; set; } = new List<ArtMartial>();
+
+   //     public List<int>? ArtMartiauxIds { get; set; } = new List<int>();
     }
 }

@@ -9,85 +9,105 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TpDojo
 build_property.RootNamespace = TpDojo
-build_property.ProjectDir = C:\Users\Pierre\source\repos\TpDojo\TpDojo\
+build_property.ProjectDir = C:\Users\Pierre\source\repos\TPDojo\TpDojo\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Pierre\source\repos\TpDojo\TpDojo
+build_property.MSBuildProjectDirectory = C:\Users\Pierre\source\repos\TPDojo\TpDojo
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Pierre/source/repos/TpDojo/TpDojo/Views/Armes/Create.cshtml]
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/Armes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJtZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Pierre/source/repos/TpDojo/TpDojo/Views/Armes/Delete.cshtml]
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/Armes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJtZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Pierre/source/repos/TpDojo/TpDojo/Views/Armes/Details.cshtml]
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/Armes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJtZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Pierre/source/repos/TpDojo/TpDojo/Views/Armes/Edit.cshtml]
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/Armes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJtZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Pierre/source/repos/TpDojo/TpDojo/Views/Armes/Index.cshtml]
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/Armes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJtZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Pierre/source/repos/TpDojo/TpDojo/Views/Home/Index.cshtml]
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/ArtMartials/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0TWFydGlhbHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/ArtMartials/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0TWFydGlhbHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/ArtMartials/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0TWFydGlhbHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/ArtMartials/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0TWFydGlhbHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/ArtMartials/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0TWFydGlhbHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Pierre/source/repos/TpDojo/TpDojo/Views/Home/Privacy.cshtml]
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Pierre/source/repos/TpDojo/TpDojo/Views/Samurais/Create.cshtml]
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/Samurais/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FtdXJhaXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Pierre/source/repos/TpDojo/TpDojo/Views/Samurais/Delete.cshtml]
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/Samurais/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FtdXJhaXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Pierre/source/repos/TpDojo/TpDojo/Views/Samurais/Details.cshtml]
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/Samurais/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FtdXJhaXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Pierre/source/repos/TpDojo/TpDojo/Views/Samurais/Edit.cshtml]
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/Samurais/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FtdXJhaXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Pierre/source/repos/TpDojo/TpDojo/Views/Samurais/Index.cshtml]
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/Samurais/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FtdXJhaXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Pierre/source/repos/TpDojo/TpDojo/Views/Samurais/_form_samurai.cshtml]
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/Samurais/_form_samurai.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FtdXJhaXNcX2Zvcm1fc2FtdXJhaS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Pierre/source/repos/TpDojo/TpDojo/Views/Samurais/_samurai_details.cshtml]
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/Samurais/_samurai_details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2FtdXJhaXNcX3NhbXVyYWlfZGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Pierre/source/repos/TpDojo/TpDojo/Views/Shared/Error.cshtml]
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Pierre/source/repos/TpDojo/TpDojo/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Pierre/source/repos/TpDojo/TpDojo/Views/_ViewImports.cshtml]
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Pierre/source/repos/TpDojo/TpDojo/Views/_ViewStart.cshtml]
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Pierre/source/repos/TpDojo/TpDojo/Views/Shared/_Layout.cshtml]
+[C:/Users/Pierre/source/repos/TPDojo/TpDojo/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-o4d1wew9qa

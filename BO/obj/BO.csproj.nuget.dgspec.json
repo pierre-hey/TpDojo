@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Pierre\\source\\repos\\TpDojo\\BO\\BO.csproj": {}
+    "C:\\Users\\Pierre\\source\\repos\\TPDojo\\BO\\BO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Pierre\\source\\repos\\TpDojo\\BO\\BO.csproj": {
+    "C:\\Users\\Pierre\\source\\repos\\TPDojo\\BO\\BO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Pierre\\source\\repos\\TpDojo\\BO\\BO.csproj",
+        "projectUniqueName": "C:\\Users\\Pierre\\source\\repos\\TPDojo\\BO\\BO.csproj",
         "projectName": "BO",
-        "projectPath": "C:\\Users\\Pierre\\source\\repos\\TpDojo\\BO\\BO.csproj",
+        "projectPath": "C:\\Users\\Pierre\\source\\repos\\TPDojo\\BO\\BO.csproj",
         "packagesPath": "C:\\Users\\Pierre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Pierre\\source\\repos\\TpDojo\\BO\\obj\\",
+        "outputPath": "C:\\Users\\Pierre\\source\\repos\\TPDojo\\BO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -10,85 +10,85 @@ using TpDojo.Data;
 
 namespace TpDojo.Controllers
 {
-    public class ArmesController : Controller
+    public class ArtMartialsController : Controller
     {
         private readonly TpDojoContext _context;
 
-        public ArmesController(TpDojoContext context)
+        public ArtMartialsController(TpDojoContext context)
         {
             _context = context;
         }
 
-        // GET: Armes
+        // GET: ArtMartials
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Arme.ToListAsync());
+              return View(await _context.ArtMartial.ToListAsync());
         }
 
-        // GET: Armes/Details/5
+        // GET: ArtMartials/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Arme == null)
+            if (id == null || _context.ArtMartial == null)
             {
                 return NotFound();
             }
 
-            var arme = await _context.Arme
+            var artMartial = await _context.ArtMartial
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (arme == null)
+            if (artMartial == null)
             {
                 return NotFound();
             }
 
-            return View(arme);
+            return View(artMartial);
         }
 
-        // GET: Armes/Create
+        // GET: ArtMartials/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Armes/Create
+        // POST: ArtMartials/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nom,Degat")] Arme arme)
+        public async Task<IActionResult> Create([Bind("Id,Nom")] ArtMartial artMartial)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(arme);
+                _context.Add(artMartial);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(arme);
+            return View(artMartial);
         }
 
-        // GET: Armes/Edit/5
+        // GET: ArtMartials/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Arme == null)
+            if (id == null || _context.ArtMartial == null)
             {
                 return NotFound();
             }
 
-            var arme = await _context.Arme.FindAsync(id);
-            if (arme == null)
+            var artMartial = await _context.ArtMartial.FindAsync(id);
+            if (artMartial == null)
             {
                 return NotFound();
             }
-            return View(arme);
+            return View(artMartial);
         }
 
-        // POST: Armes/Edit/5
+        // POST: ArtMartials/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nom,Degat")] Arme arme)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nom")] ArtMartial artMartial)
         {
-            if (id != arme.Id)
+            if (id != artMartial.Id)
             {
                 return NotFound();
             }
@@ -97,12 +97,12 @@ namespace TpDojo.Controllers
             {
                 try
                 {
-                    _context.Update(arme);
+                    _context.Update(artMartial);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ArmeExists(arme.Id))
+                    if (!ArtMartialExists(artMartial.Id))
                     {
                         return NotFound();
                     }
@@ -113,60 +113,49 @@ namespace TpDojo.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(arme);
+            return View(artMartial);
         }
 
-        // GET: Armes/Delete/5
+        // GET: ArtMartials/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Arme == null)
+            if (id == null || _context.ArtMartial == null)
             {
                 return NotFound();
             }
 
-            var arme = await _context.Arme
+            var artMartial = await _context.ArtMartial
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (arme == null)
+            if (artMartial == null)
             {
                 return NotFound();
             }
 
-            return View(arme);
+            return View(artMartial);
         }
 
-        // POST: Armes/Delete/5
+        // POST: ArtMartials/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Arme == null)
+            if (_context.ArtMartial == null)
             {
-                return Problem("Entity set 'TpDojoContext.Arme'  is null.");
+                return Problem("Entity set 'TpDojoContext.ArtMartial'  is null.");
             }
-            var arme = await _context.Arme.FindAsync(id);
-            if (arme != null)
+            var artMartial = await _context.ArtMartial.FindAsync(id);
+            if (artMartial != null)
             {
-                if(!_context.Samurai.Where(s=>s.Arme == arme).Any())
-                {
-                    _context.Arme.Remove(arme);
-                }
-                else
-                {
-                    Console.WriteLine("##################################");
-                    Console.WriteLine("Retirer l'arme du samurai avant de la supprimer");
-                    Console.WriteLine("##################################");
-                    return Problem("Retirer l'arme du samurai avant de la supprimer");
-                }
-               
+                _context.ArtMartial.Remove(artMartial);
             }
             
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ArmeExists(int id)
+        private bool ArtMartialExists(int id)
         {
-          return _context.Arme.Any(e => e.Id == id);
+          return _context.ArtMartial.Any(e => e.Id == id);
         }
     }
 }

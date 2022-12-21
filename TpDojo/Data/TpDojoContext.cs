@@ -25,8 +25,15 @@ namespace TpDojo.Data
             modelBuilder
                 .Entity<Samurai>()
                 .HasOne(s => s.Arme)
-                .WithMany()
+                .WithOne()
                 .OnDelete(DeleteBehavior.SetNull);
+
+
+            modelBuilder
+                .Entity<Samurai>()
+                .HasMany(s => s.ArtMartiaux)
+                .WithMany(a => a.Samurais)
+                .UsingEntity("SamuraiArt");
 
 
             int id = 1;
@@ -358,5 +365,8 @@ namespace TpDojo.Data
 
 
         }
+
+
+        public DbSet<BO.ArtMartial> ArtMartial { get; set; }
     }
 }
