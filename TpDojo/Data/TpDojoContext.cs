@@ -10,7 +10,7 @@ namespace TpDojo.Data
 {
     public class TpDojoContext : DbContext
     {
-        public TpDojoContext (DbContextOptions<TpDojoContext> options)
+        public TpDojoContext(DbContextOptions<TpDojoContext> options)
             : base(options)
         {
         }
@@ -52,7 +52,7 @@ namespace TpDojo.Data
             modelBuilder.Entity<Samurai>().HasData(new Samurai { Id = id++, Nom = "Akao Kiyotsuna", Force = r.Next(2000) });
             modelBuilder.Entity<Samurai>().HasData(new Samurai { Id = id++, Nom = "Akechi Mitsuhide", Force = r.Next(2000) });
             modelBuilder.Entity<Samurai>().HasData(new Samurai { Id = id++, Nom = "Akiyama Nobutomo", Force = r.Next(2000) });
-          
+
             modelBuilder.Entity<Samurai>().HasData(new Samurai { Id = id++, Nom = "Chiba Shusaku Narimasa", Force = r.Next(2000) });
             modelBuilder.Entity<Samurai>().HasData(new Samurai { Id = id++, Nom = "Chōsokabe Morichika", Force = r.Next(2000) });
             modelBuilder.Entity<Samurai>().HasData(new Samurai { Id = id++, Nom = "Chōsokabe Kunichika", Force = r.Next(2000) });
@@ -60,7 +60,7 @@ namespace TpDojo.Data
             modelBuilder.Entity<Samurai>().HasData(new Samurai { Id = id++, Nom = "Chōsokabe Nobuchika", Force = r.Next(2000) });
             modelBuilder.Entity<Samurai>().HasData(new Samurai { Id = id++, Nom = "Collache Eugène", Force = r.Next(2000) });
             modelBuilder.Entity<Samurai>().HasData(new Samurai { Id = id++, Nom = "Date Masamune", Force = r.Next(2000) });
-   
+
             modelBuilder.Entity<Samurai>().HasData(new Samurai { Id = id++, Nom = "Honda Tadatomo", Force = r.Next(2000) });
             modelBuilder.Entity<Samurai>().HasData(new Samurai { Id = id++, Nom = "Honganji Kennyo", Force = r.Next(2000) });
             modelBuilder.Entity<Samurai>().HasData(new Samurai { Id = id++, Nom = "Horio Yoshiharu", Force = r.Next(2000) });

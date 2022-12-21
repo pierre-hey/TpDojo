@@ -22,7 +22,7 @@ namespace TpDojo.Controllers
         // GET: Armes
         public async Task<IActionResult> Index()
         {
-              return View(await _context.Arme.Include(a=>a.Samurai).ToListAsync());
+            return View(await _context.Arme.Include(a => a.Samurai).ToListAsync());
         }
 
         // GET: Armes/Details/5
@@ -147,7 +147,7 @@ namespace TpDojo.Controllers
             var arme = await _context.Arme.FindAsync(id);
             if (arme != null)
             {
-                if(!_context.Samurai.Where(s=>s.Arme == arme).Any())
+                if (!_context.Samurai.Where(s => s.Arme == arme).Any())
                 {
                     _context.Arme.Remove(arme);
                 }
@@ -158,16 +158,16 @@ namespace TpDojo.Controllers
                     Console.WriteLine("##################################");
                     return Problem("Retirer l'arme du samurai avant de la supprimer");
                 }
-               
+
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ArmeExists(int id)
         {
-          return _context.Arme.Any(e => e.Id == id);
+            return _context.Arme.Any(e => e.Id == id);
         }
     }
 }

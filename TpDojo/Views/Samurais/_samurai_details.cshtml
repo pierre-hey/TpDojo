@@ -1,40 +1,40 @@
 ﻿@model BO.Samurai
 <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Nom)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Nom)
-        </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Nom)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Nom)
+    </dd>
 
 
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Force)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Force)
-        </dd>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Force)
+    </dt>
+    <dd class="col-sm-10">
+        @Html.DisplayFor(model => model.Force)
+    </dd>
 
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Arme)
-        </dt>
+    <dt class="col-sm-2">
+        @Html.DisplayNameFor(model => model.Arme)
+    </dt>
 
-        <dd class = "col-sm-10">
+    <dd class="col-sm-10">
         @Html.DisplayFor(model => model.Arme.Nom) - @Html.DisplayFor(model => model.Arme.Degat)
-        </dd>
+    </dd>
 
-        <dt class = "col-sm-2">
-           
+    <dt class="col-sm-2">
+
         @Html.DisplayNameFor(model => model.ArtMartiaux)
-        </dt>
-        <dd class = "col-sm-10">
-            <ul>
-                 @foreach (var art in Model.ArtMartiaux)
-                {
+    </dt>
+    <dd class="col-sm-10">
+        <ul>
+            @foreach (var art in Model.ArtMartiaux)
+            {
                 <li>@art.Nom</li>
-                }
-            </ul>
-        </dd>
+            }
+        </ul>
+    </dd>
 
 
     <dt class="col-sm-2">
@@ -44,4 +44,4 @@
         @Html.DisplayFor(model => model.Potentiel)
     </dd>
 
-    </dl>
+</dl>

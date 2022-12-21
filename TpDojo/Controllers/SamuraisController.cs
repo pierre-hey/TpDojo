@@ -20,12 +20,12 @@ namespace TpDojo.Controllers
         {
             _context = context;
         }
-        
+
         // GET: Samurais
         public async Task<IActionResult> Index(
-                                            string sortOrder, 
-                                            string currentFilter, 
-                                            string searchString, 
+                                            string sortOrder,
+                                            string currentFilter,
+                                            string searchString,
                                             int? pageNumber)
         {
             ViewData["CurrentSort"] = sortOrder;
@@ -73,13 +73,13 @@ namespace TpDojo.Controllers
                     break;
 
                 case "Arme":
-                    samurais = samurais.Include(s=>s.Arme).OrderByDescending(s => s.Arme.Nom);
+                    samurais = samurais.Include(s => s.Arme).OrderByDescending(s => s.Arme.Nom);
                     break;
                 case "arme_asc":
                     samurais = samurais.Include(s => s.Arme).OrderBy(s => s.Arme.Nom);
-                    break;     
+                    break;
 
-                default: 
+                default:
                     samurais = samurais.OrderBy(s => s.Id);
                     break;
             }
@@ -106,8 +106,8 @@ namespace TpDojo.Controllers
             {
                 return NotFound();
             }
-     
-            int potentielDegat = (samurai.Force + (samurai.Arme is null ? 0 : samurai.Arme.Degat)) 
+
+            int potentielDegat = (samurai.Force + (samurai.Arme is null ? 0 : samurai.Arme.Degat))
                                     * ((samurai.ArtMartiaux is null ? 1 : samurai.ArtMartiaux.Count() + 1));
             ViewData["potentielDegat"] = potentielDegat;
 
@@ -120,11 +120,11 @@ namespace TpDojo.Controllers
             SamuraiVM samuraiVM = new SamuraiVM
             {
                 Samurai = new Samurai(),
-                ArmesSelect = BuildSelectListArme(),                
+                ArmesSelect = BuildSelectListArme(),
                 ArtsMartiauxSelect = BuildSelectListArtsMartiaux(),
 
             };
-            
+
             return View(samuraiVM);
         }
 
@@ -138,7 +138,7 @@ namespace TpDojo.Controllers
 
             if (ModelState.IsValid)
             {
-                if(samuraiVM.Samurai.ArmeId != null && _context.Samurai.Any(s => s.ArmeId == samuraiVM.Samurai.ArmeId))
+                if (samuraiVM.Samurai.ArmeId != null && _context.Samurai.Any(s => s.ArmeId == samuraiVM.Samurai.ArmeId))
                 {
                     return BadRequest();
                 }
@@ -149,10 +149,10 @@ namespace TpDojo.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-           
+
             samuraiVM.ArmesSelect = BuildSelectListArme();
             samuraiVM.ArtsMartiauxSelect = BuildSelectListArtsMartiaux();
-            
+
             return View(samuraiVM);
         }
 
@@ -179,7 +179,7 @@ namespace TpDojo.Controllers
             {
                 Samurai = samuraiAModifie,
                 IdsArtsMartiaux = samuraiAModifie.ArtMartiaux.Select(a => a.Id).ToList(),
-                ArmesSelect = BuildSelectListArme(id),                
+                ArmesSelect = BuildSelectListArme(id),
                 ArtsMartiauxSelect = BuildSelectListArtsMartiaux(),
             };
 
@@ -202,12 +202,12 @@ namespace TpDojo.Controllers
             {
                 try
                 {
-                   Samurai? samurai = _context.Samurai.Include(s => s.Arme)
-                                    .Include(s => s.ArtMartiaux)
-                                    .FirstOrDefault(s => s.Id == id);
+                    Samurai? samurai = _context.Samurai.Include(s => s.Arme)
+                                     .Include(s => s.ArtMartiaux)
+                                     .FirstOrDefault(s => s.Id == id);
 
-                    if(samurai is null) return NotFound();
-                   
+                    if (samurai is null) return NotFound();
+
 
                     // Si l'arme est null && si l'id du samurai est différent de celui que l'on modifie && si l'arme du samurai est déjà utilisé
                     if (samuraiVM.Samurai.ArmeId != null && _context.Samurai.Any(s => s.Id != id && s.ArmeId == samuraiVM.Samurai.ArmeId))
@@ -219,11 +219,11 @@ namespace TpDojo.Controllers
                     samurai.Force = samuraiVM.Samurai.Force;
                     samurai.ArmeId = samuraiVM.Samurai.ArmeId;
 
-                    if(samuraiVM.IdsArtsMartiaux != null && samuraiVM.IdsArtsMartiaux.Any())
+                    if (samuraiVM.IdsArtsMartiaux != null && samuraiVM.IdsArtsMartiaux.Any())
                     {
-                       samurai.ArtMartiaux = _context.ArtMartial.Where(a => samuraiVM.IdsArtsMartiaux
-                                                                .Contains(a.Id))
-                                                                .ToList();
+                        samurai.ArtMartiaux = _context.ArtMartial.Where(a => samuraiVM.IdsArtsMartiaux
+                                                                 .Contains(a.Id))
+                                                                 .ToList();
                     }
                     else
                     {
@@ -265,7 +265,7 @@ namespace TpDojo.Controllers
                 .FirstOrDefaultAsync(m => m.Id == id);
 
             //int potentielDegat = (samurai.Force + (samurai.Arme is null ? 0 : samurai.Arme.Degat)) 
-           //                                                 * ((samurai.ArtMartiaux is null ? 1 : samurai.ArtMartiaux.Count() + 1));
+            //                                                 * ((samurai.ArtMartiaux is null ? 1 : samurai.ArtMartiaux.Count() + 1));
             //ViewData["potentielDegat"] = potentielDegat;
 
             if (samurai == null)
@@ -290,22 +290,22 @@ namespace TpDojo.Controllers
             {
                 _context.Samurai.Remove(samurai);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool SamuraiExists(int id)
         {
-          return _context.Samurai.Any(e => e.Id == id);
+            return _context.Samurai.Any(e => e.Id == id);
         }
 
         private SelectList BuildSelectListArme(int? samuraiId = null)
-         {
-             return new SelectList(_context.Arme
-                                         .Where(a => a.Samurai == null || a.Samurai.Id == samuraiId)
-                                         .ToList(), "Id", "Nom");
-         }
+        {
+            return new SelectList(_context.Arme
+                                        .Where(a => a.Samurai == null || a.Samurai.Id == samuraiId)
+                                        .ToList(), "Id", "Nom");
+        }
 
         private SelectList BuildSelectListArtsMartiaux()
         {

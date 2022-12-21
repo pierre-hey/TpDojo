@@ -22,7 +22,7 @@ namespace TpDojo.Controllers
         // GET: ArtMartials
         public async Task<IActionResult> Index()
         {
-              return View(await _context.ArtMartial.ToListAsync());
+            return View(await _context.ArtMartial.ToListAsync());
         }
 
         // GET: ArtMartials/Details/5
@@ -148,14 +148,14 @@ namespace TpDojo.Controllers
             {
                 _context.ArtMartial.Remove(artMartial);
             }
-            
+
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
         private bool ArtMartialExists(int id)
         {
-          return _context.ArtMartial.Any(e => e.Id == id);
+            return _context.ArtMartial.Any(e => e.Id == id);
         }
     }
 }
